@@ -65,7 +65,7 @@ a {
   color: #DBE0E9;
 }
 .menu-background{
-  background-color: #495874;
+  background: linear-gradient(to right, #1e2e63, #3b49a3);
   color: #DBE0E9;
   width: 100%;
 }

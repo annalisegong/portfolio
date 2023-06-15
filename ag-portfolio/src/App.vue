@@ -5,14 +5,12 @@
 
 <script>
 import TopNav from './components/topNav.vue'
-import ProjectCard from './components/projectCard.vue'
-import MainBody from "@/components/mainBody.vue";
+import MainBody from "@/components/mainBody.vue"
 export default {
   name: 'App',
   components: {
     MainBody,
-    TopNav,
-    ProjectCard
+    TopNav
   }
 }
 </script>

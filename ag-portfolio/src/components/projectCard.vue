@@ -19,11 +19,14 @@
           {{bName}}
         </v-btn>
       </v-card-actions>
-      <!--        <v-row>-->
-      <!--          <v-col v-for="item in items" :key="item">{{item}}</v-col>-->
-      <!--        </v-row>-->
-      <v-card-text style="margin-left: 30px; margin-right: 30px; line-height: 1.75;">{{ text }}</v-card-text>
-      <h4 style="text-align: center">Stack</h4>
+      <div>
+        <v-card-text style="line-height: 1.75; min-height: 300px; margin: 0px 20px;">{{ text }}</v-card-text>
+      </div>
+<!-- get stack to start at same spot on -->
+      <h4 style="text-align: center; color:  #7c60bd; font-size: 14pt">Stack</h4>
+      <div class="stack-settings">
+        <span v-for="(item, index) in items" :key="index" style="margin-right: 22px;">{{ item }}</span>
+      </div>
     </v-card>
 </template>
 
@@ -51,8 +54,16 @@ export default {
   min-width: 100%;
   min-height: 100%;
   background-color:#1e1d2b;
-  box-shadow: 0 0 8px #4bbedb;
+  box-shadow: 0 0 8px #7c60bd;
   color: #DBE0E9;
+}
+
+.stack-settings{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  height: 50px;
 }
 
 </style>
