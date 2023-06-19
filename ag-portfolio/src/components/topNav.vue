@@ -1,6 +1,6 @@
 <template>
   <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-  <v-container class="menu-background" style="padding: 25px 0px 25px 0px">
+  <v-container class="menu-background" style="padding: 25px 0px 25px 0px; font-family: 'Space Grotesk'">
       <v-row no-gutters
              class="justify-space text-center"
              style="min-width: 100%; min-height: 100%; align-items: center;">

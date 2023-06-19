@@ -1,5 +1,5 @@
 <template>
-  <v-card class="a-card a-card-gradient">
+  <v-card class="a-card a-card-gradient" style="font-family: 'Space Grotesk'">
     <v-card-title class="a-title">
       {{title}}
     </v-card-title>

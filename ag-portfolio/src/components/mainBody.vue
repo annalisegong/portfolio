@@ -1,13 +1,14 @@
 <template>
+  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
   <!--  intro section-->
-  <v-container display:flex>
+  <v-container display:flex style="font-family: 'Space Grotesk'">
     <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
     <h1 class="text-gradient">Welcome to my Portfolio</h1>
-    <p class="intro-p">Aspiring mobile and web developer graduating Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
+    <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
     <v-btn rounded height="60" min-width="200" href="#About" class="intro-btn">Learn More</v-btn>
   </v-container>
   <!--  projects section-->
-  <v-container id="Projects">
+  <v-container id="Projects" style="font-family: 'Space Grotesk'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
@@ -47,7 +48,7 @@
       </v-row>
     </v-container>
   <!-- tech section-->
-  <v-container id="Technologies">
+  <v-container id="Technologies" style="font-family: 'Space Grotesk'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="heading-gradient">Technologies</h2>
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
@@ -73,7 +74,7 @@
       </v-row>
     </v-container>
   <!--  about section-->
-  <v-container id="About">
+  <v-container id="About" style="font-family: 'Space Grotesk'">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">About</h2>
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
@@ -140,7 +141,7 @@
 
   </v-container>
   <!--  resume section-->
-  <v-container id="Resume" style="padding-bottom: 0px">
+  <v-container id="Resume" style="padding-bottom: 0px; font-family: 'Space Grotesk'">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />

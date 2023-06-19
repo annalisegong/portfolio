@@ -1,4 +1,5 @@
 <template>
+  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
     <TopNav />
     <MainBody />
     <MyFooter />
@@ -24,6 +25,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1e1d2b;
-  color: #2c3e50;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <v-card class="main-card">
+    <v-card class="main-card" style="font-family: 'Space Grotesk'">
       <v-card-title class="p-card-title">{{ title }}</v-card-title>
       <v-img max-height="250px" :src="url" style="padding: 10px"/>
       <v-card-actions class="justify-center" style="padding: 10px">

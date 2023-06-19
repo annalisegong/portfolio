@@ -1,5 +1,5 @@
 <template>
-  <v-container class="footer-style">
+  <v-container class="footer-style" style="font-family: 'Space Grotesk'">
     <v-row style="align-items: center">
       <h5>An investment in knowledge pays the best interest</h5>
       <v-spacer></v-spacer>
@@ -33,7 +33,7 @@
 .footer-style{
   background-color: #1e1d2b;
   color: #9e9e9e;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   align-items: center;
 }
 .btn-style{

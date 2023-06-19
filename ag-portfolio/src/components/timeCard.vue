@@ -1,5 +1,5 @@
 <template>
-  <v-card class="t-card-style">
+  <v-card class="t-card-style" style="font-family: 'Space Grotesk'">
     <v-card-title class="t-card-title">
       <div class="year-line">
         <div class="year">{{year}}</div>

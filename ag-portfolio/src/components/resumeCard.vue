@@ -1,5 +1,5 @@
 <template>
-  <div style="display:flex; justify-content: center; align-items: center;">
+  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Space Grotesk'">
     <v-card class="resume-card">
       <v-img src="src/assets/resume.png" class="img-size"/>
       <div style="display: flex;justify-content: center; align-items: center">
