@@ -1,5 +1,6 @@
 <template>
-    <v-container class="menu-background">
+  <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+  <v-container class="menu-background">
       <v-row no-gutters
              class="justify-space-between text-center"
              style="min-width: 100%; min-height: 100%; align-items: center;">
@@ -28,7 +29,7 @@
                  href="https://linkedin.com/in/annalise-gong/"
                  target="_blank"
                  class="btn-style">li</v-btn>
-          <v-btn icon
+          <v-btn icon="mdi-instagram"
                  href="#"
                  target="_blank"
                  class="btn-style">ig</v-btn>

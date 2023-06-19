@@ -24,9 +24,11 @@
         <v-card-text class="p-card-text">{{ text }}</v-card-text>
       </div>
 <!-- get stack to start at same spot on -->
-      <h4 style="text-align: center; color:  #7c60bd; font-size: 14pt">Stack</h4>
-      <div class="stack-settings">
-        <span v-for="(item, index) in items" :key="index" style="margin-right: 22px;">{{ item }}</span>
+      <div class="stack-container">
+        <h4 style="text-align: center; color:  #7c60bd; font-size: 14pt">Stack</h4>
+        <div class="stack-settings">
+          <span v-for="(item, index) in items" :key="index" style="margin-right: 22px;">{{ item }}</span>
+        </div>
       </div>
     </v-card>
 </template>
@@ -62,10 +64,12 @@ export default {
   color: #DBE0E9;
   text-align: center;
   font-size: 22pt;
+  white-space: break-spaces;
+  word-break: break-word;
 }
 .p-card-text{
   line-height: 1.75;
-  min-height: 280px;
+  min-height: 230px;
   margin: 0px 20px;
   color: #DBE0E9;
 }
@@ -74,11 +78,18 @@ export default {
   color:#f4f2f5;
   text-transform: none;
 }
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
 .stack-settings{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  padding: 10px 10px;
+  padding: 10px;
   height: 50px;
 }
 

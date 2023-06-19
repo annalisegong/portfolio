@@ -43,16 +43,18 @@
 }
 .a-title {
   font-size: 19pt;
+  white-space: break-spaces;
+  word-break: break-word;
   margin: 10px 10px 6px 6px;
   text-align: center;
 }
 .a-subtitle{
-  display: flex;
-  flex-wrap: wrap;
   font-size: 14pt;
   margin: 4px 4px 10px 10px;
   text-align: left;
   line-height: 1;
+  white-space: break-spaces;
+  word-break: break-word;
 }
 .a-text{
   display: flex;
