@@ -3,7 +3,7 @@
       <v-card-title class="p-card-title">{{ title }}</v-card-title>
       <v-img max-height="250px" :src="url" style="padding: 10px"/>
       <v-card-actions class="justify-center" style="padding: 10px">
-        <v-btn
+        <v-btn rounded
           class="p-card-btn"
           variant="text"
           :href="code"
@@ -11,7 +11,7 @@
         >
           code
         </v-btn>
-        <v-btn
+        <v-btn rounded
           class="p-card-btn"
           variant="text"
           :href="download"
@@ -74,8 +74,9 @@ export default {
   color: #DBE0E9;
 }
 .p-card-btn{
-  background-color: #7c60bd;
+  background: linear-gradient(to right, #4a2a6d, #8b5cc0);
   color:#f4f2f5;
+  line-height: 1.5;
   text-transform: none;
 }
 .stack-container {

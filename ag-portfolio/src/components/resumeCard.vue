@@ -6,7 +6,9 @@
         <v-divider color="#f4f2f5" length="80" thickness="5" style=" padding-bottom: 5px;" class="divider-wt line-gradient"></v-divider>
       </div>
       <v-card-actions class="justify-center" style="padding: 10px">
-        <v-btn
+        <v-btn rounded
+               height="40"
+               width="100"
           class="r-card-btn"
           variant="text"
           href="src/assets/resume.png"
@@ -39,9 +41,11 @@ export default {
   min-width: 450px;
 }
 .r-card-btn{
-  background-color: #3b49a3;
+  background: linear-gradient(to right, #3b49a3, #4bbedb);
+  color: #f0f0f0;
   color: #DBE0E9;
-  font-size: 20pt;
+  font-size: 18pt;
+  line-height: 1.5;
   text-transform: none;
 }
 </style>

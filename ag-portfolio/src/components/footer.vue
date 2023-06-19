@@ -1,20 +1,23 @@
 <template>
   <v-container class="footer-style">
-    <v-row>
+    <v-row style="align-items: center">
       <h5>An investment in knowledge pays the best interest</h5>
       <v-spacer></v-spacer>
-      <v-btn icon
-             href="https://github.com/annalisegong?tab=repositories"
+      <v-btn href="https://github.com/annalisegong?tab=repositories"
              target="_blank"
-             class="btn-style">gh</v-btn>
-      <v-btn icon
-             href="https://linkedin.com/in/annalise-gong/"
+             class="btn-style">
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
+      <v-btn href="https://linkedin.com/in/annalise-gong/"
              target="_blank"
-             class="btn-style">li</v-btn>
-      <v-btn icon
-             href="#"
+             class="btn-style">
+        <v-icon>mdi-linkedin</v-icon>
+      </v-btn>
+      <v-btn href="#"
              target="_blank"
-             class="btn-style">ig</v-btn>
+             class="btn-style">
+        <v-icon>mdi-instagram</v-icon>
+      </v-btn>
     </v-row>
   </v-container>
 </template>
@@ -34,7 +37,19 @@
   align-items: center;
 }
 .btn-style{
-  margin-left: 6px;
-  margin-right: 6px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Makes the button a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  text-decoration: none;
+//margin-left: 2px;
+//margin-right: 2px;
+  color: #DBE0E9;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 18pt;
 }
 </style>

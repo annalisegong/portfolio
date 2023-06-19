@@ -1,8 +1,8 @@
 <template>
   <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-  <v-container class="menu-background">
+  <v-container class="menu-background" style="padding: 25px 0px 25px 0px">
       <v-row no-gutters
-             class="justify-space-between text-center"
+             class="justify-space text-center"
              style="min-width: 100%; min-height: 100%; align-items: center;">
         <v-col>
           logo goes here
@@ -19,33 +19,40 @@
         <v-col>
           <a href="#Resume" style="text-decoration: none" @click="scrollToSection('Resume')"><h4>Resume</h4></a>
         </v-col>
-        <v-col>
 <!-- add instagram link href-->
-          <v-btn icon
-                 href="https://github.com/annalisegong?tab=repositories"
+          <v-btn href="https://github.com/annalisegong?tab=repositories"
                  target="_blank"
-                 class="btn-style">gh</v-btn>
-          <v-btn icon
-                 href="https://linkedin.com/in/annalise-gong/"
+                 class="btn-style">
+            <v-icon>mdi-github</v-icon>
+          </v-btn>
+          <v-btn href="https://linkedin.com/in/annalise-gong/"
                  target="_blank"
-                 class="btn-style">li</v-btn>
-          <v-btn icon="mdi-instagram"
-                 href="#"
+                 class="btn-style">
+            <v-icon>mdi-linkedin</v-icon>
+          </v-btn>
+          <v-btn href="#"
                  target="_blank"
-                 class="btn-style">ig</v-btn>
-        </v-col>
+                 class="btn-style">
+            <v-icon>mdi-instagram</v-icon>
+          </v-btn>
       </v-row>
     </v-container>
 </template>
 
 <script>
+import SvgIcon from '@jamescoyle/vue-icon'
+import {mdiAccount} from '@mdi/js'
 export default {
   name: 'TopNav',
+  components:{
+    SvgIcon
+  },
   props: {
   },
   data(){
     return{
-      labels: ['Projects', 'Technologies', 'About','Resume']
+      labels: ['Projects', 'Technologies', 'About','Resume'],
+      path: mdiAccount
     }
   },
   methods: {
@@ -86,16 +93,24 @@ a {
   color: #DBE0E9;
 }
 .menu-background{
-  //background: linear-gradient(to right, #1e2e63, #3b49a3);
   display: flex;
   color: #DBE0E9;
   width: 100%;
   padding: 20px 0px 50px 0px;
 }
 .btn-style{
-  margin-left: 6px;
-  margin-right: 6px;
-  color: #1e2e63;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Makes the button a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #DBE0E9;
+  background-color: transparent;
+  box-shadow: none;
+  margin-right: 5px;
 }
 
 </style>

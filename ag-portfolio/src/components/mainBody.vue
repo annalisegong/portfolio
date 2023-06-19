@@ -38,7 +38,10 @@
             url="src/assets/splashLogo.png"
             :items="p3Stack"
             text="Details soon to come"
-            code="#"/>
+            code="#"
+            bName="TBD"
+            download="#"
+          />
         </v-col>
   <!--      finish this card at the end of internship-->
       </v-row>
@@ -75,6 +78,7 @@
     <h2 class="text-gradient">About</h2>
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
     <p>Currently, I am a software engineering intern for Splash Clinical LLC. Within the next year, I hope to continue improving my programming skills, solidify my career path, and land a full time job after graduation.</p>
+    <!--timeline   -->
     <div id="timeline" class="timeline-container">
       <v-row justify="space-evenly" class="timeline-row">
         <v-col class="time-card-size">
@@ -103,7 +107,7 @@
       </v-row>
     </div><br>
     <v-divider color="#f4f2f5" length="75" thickness="5" style="margin-left: 60px; padding-top: 5px;" class="divider-wt line-gradient"></v-divider>
-
+    <!-- accomplishments     -->
     <div id="accomplishments" style="margin-left: 60px;">
       <h3 class="text-gradient" style="padding-bottom: 20px;">Personal Accomplishments</h3>
       <v-row justify="center">
@@ -136,12 +140,12 @@
 
   </v-container>
   <!--  resume section-->
-  <v-container id="Resume">
+  <v-container id="Resume" style="padding-bottom: 0px">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />
     <br>
-    <v-divider color="#f4f2f5" thickness="3" class="divider-wt line-gradient"></v-divider>
+    <v-divider color="#f4f2f5" thickness="3" style="padding-top: 5px" class="divider-wt line-gradient"></v-divider>
   </v-container>
   <!--  footer section-->
 </template>
@@ -214,7 +218,7 @@ p{
   margin-right: 400px;
 }
 .intro-btn{
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left: 50px;
   background: linear-gradient(to right, #923fb8, #4bbedb);
   color: #f0f0f0;
