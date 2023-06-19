@@ -1,16 +1,19 @@
 <template>
-  <TopNav />
-  <MainBody />
+    <TopNav />
+    <MainBody />
+    <MyFooter />
 </template>
 
 <script>
 import TopNav from './components/topNav.vue'
 import MainBody from "@/components/mainBody.vue"
+import MyFooter from "@/components/footer.vue";
 export default {
   name: 'App',
   components: {
+    TopNav,
     MainBody,
-    TopNav
+    MyFooter
   }
 }
 </script>

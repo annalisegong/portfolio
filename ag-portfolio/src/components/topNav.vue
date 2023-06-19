@@ -1,38 +1,37 @@
 <template>
     <v-container class="menu-background">
-      <v-row align="center"
-             no-gutters
-             justify="space-evenly"
-             style="min-width: 100%; min-height: 100%;">
-        <v-col id="m-logo">
+      <v-row no-gutters
+             class="justify-space-between text-center"
+             style="min-width: 100%; min-height: 100%; align-items: center;">
+        <v-col>
           logo goes here
         </v-col>
-        <v-col id="m-projects">
-          <a href="#">Projects</a>
+        <v-col>
+          <a href="#Projects" style="text-decoration: none;" @click="scrollToSection('Projects')"><h4>Projects</h4></a>
         </v-col>
-        <v-col id="m-tech">
-          <a href="#">Technologies</a>
+        <v-col>
+          <a href="#Technologies" style="text-decoration: none" @click="scrollToSection('Technologies')"><h4>Technologies</h4></a>
         </v-col>
-        <v-col id="m-about">
-          <a href="#">About</a>
+        <v-col>
+          <a href="#About" style="text-decoration: none" @click="scrollToSection('About')"><h4>About</h4></a>
         </v-col>
-        <v-col id="m-resume">
-          <a href="#">Resume</a>
+        <v-col>
+          <a href="#Resume" style="text-decoration: none" @click="scrollToSection('Resume')"><h4>Resume</h4></a>
         </v-col>
         <v-col>
 <!-- add instagram link href-->
           <v-btn icon
                  href="https://github.com/annalisegong?tab=repositories"
                  target="_blank"
-                 style="padding-right: 2px">gh</v-btn>
+                 class="btn-style">gh</v-btn>
           <v-btn icon
                  href="https://linkedin.com/in/annalise-gong/"
                  target="_blank"
-                 style="padding-left: 2px; padding-right: 2px">li</v-btn>
+                 class="btn-style">li</v-btn>
           <v-btn icon
                  href="#"
                  target="_blank"
-                 style="padding-left: 2px">ig</v-btn>
+                 class="btn-style">ig</v-btn>
         </v-col>
       </v-row>
     </v-container>
@@ -42,6 +41,23 @@
 export default {
   name: 'TopNav',
   props: {
+  },
+  data(){
+    return{
+      labels: ['Projects', 'Technologies', 'About','Resume']
+    }
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          duration: 2000
+        });
+      }
+    }
   }
 }
 </script>
@@ -51,6 +67,10 @@ export default {
 h3 {
   //margin: 40px 0 0;
   //font-size: 20pt;
+}
+h4 {
+  font-size: 16pt;
+  color: #9e9e9e;
 }
 ul {
   list-style-type: none;
@@ -65,9 +85,16 @@ a {
   color: #DBE0E9;
 }
 .menu-background{
-  background: linear-gradient(to right, #1e2e63, #3b49a3);
+  //background: linear-gradient(to right, #1e2e63, #3b49a3);
+  display: flex;
   color: #DBE0E9;
   width: 100%;
+  padding: 20px 0px 50px 0px;
+}
+.btn-style{
+  margin-left: 6px;
+  margin-right: 6px;
+  color: #1e2e63;
 }
 
 </style>

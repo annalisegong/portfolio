@@ -1,10 +1,10 @@
 <template>
     <v-card class="main-card">
-      <v-card-title style="text-align: center; font-size: 18pt;  ">{{ title }}</v-card-title>
+      <v-card-title class="p-card-title">{{ title }}</v-card-title>
       <v-img max-height="250px" :src="url" style="padding: 10px"/>
       <v-card-actions class="justify-center" style="padding: 10px">
         <v-btn
-          style="background-color: #7c60bd; color:#f4f2f5; text-transform: none;"
+          class="p-card-btn"
           variant="text"
           :href="code"
           target="_blank"
@@ -12,7 +12,8 @@
           code
         </v-btn>
         <v-btn
-          style="background-color: #7c60bd; color:#f4f2f5; text-transform: none;"
+          class="p-card-btn"
+          variant="text"
           :href="download"
           target="_blank"
         >
@@ -20,7 +21,7 @@
         </v-btn>
       </v-card-actions>
       <div>
-        <v-card-text style="line-height: 1.75; min-height: 300px; margin: 0px 20px;">{{ text }}</v-card-text>
+        <v-card-text class="p-card-text">{{ text }}</v-card-text>
       </div>
 <!-- get stack to start at same spot on -->
       <h4 style="text-align: center; color:  #7c60bd; font-size: 14pt">Stack</h4>
@@ -57,7 +58,22 @@ export default {
   box-shadow: 0 0 8px #7c60bd;
   color: #DBE0E9;
 }
-
+.p-card-title{
+  color: #DBE0E9;
+  text-align: center;
+  font-size: 22pt;
+}
+.p-card-text{
+  line-height: 1.75;
+  min-height: 280px;
+  margin: 0px 20px;
+  color: #DBE0E9;
+}
+.p-card-btn{
+  background-color: #7c60bd;
+  color:#f4f2f5;
+  text-transform: none;
+}
 .stack-settings{
   display: flex;
   align-items: center;
