@@ -1,5 +1,5 @@
 <template>
-  <v-card class="a-card a-card-gradient" style="font-family: 'Space Grotesk'">
+  <v-card class="a-card a-card-gradient" style="font-family: 'Mukta'">
     <v-card-title class="a-title">
       {{title}}
     </v-card-title>
@@ -43,6 +43,7 @@
 }
 .a-title {
   font-size: 19pt;
+  font-weight: 500;
   white-space: break-spaces;
   word-break: break-word;
   margin: 10px 10px 6px 6px;
@@ -50,6 +51,7 @@
 }
 .a-subtitle{
   font-size: 14pt;
+  font-weight: 400;
   margin: 4px 4px 10px 10px;
   text-align: left;
   line-height: 1;
@@ -60,6 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 11pt;
+  font-weight: 300;
   opacity: var(--v-medium-emphasis-opacity);
   margin: 4px 4px 10px 10px;
   padding: 3px 15px;

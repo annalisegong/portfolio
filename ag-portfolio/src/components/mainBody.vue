@@ -1,14 +1,15 @@
 <template>
-  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+<!--  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">-->
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
-  <v-container display:flex style="font-family: 'Space Grotesk'">
+  <v-container display:flex style="font-family: 'Mukta'">
     <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
     <h1 class="text-gradient">Welcome to my Portfolio</h1>
     <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
     <v-btn rounded height="60" min-width="200" href="#About" class="intro-btn">Learn More</v-btn>
   </v-container>
   <!--  projects section-->
-  <v-container id="Projects" style="font-family: 'Space Grotesk'">
+  <v-container id="Projects" style="font-family: 'Mukta'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
@@ -48,7 +49,7 @@
       </v-row>
     </v-container>
   <!-- tech section-->
-  <v-container id="Technologies" style="font-family: 'Space Grotesk'">
+  <v-container id="Technologies" style="font-family: 'Mukta'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="heading-gradient">Technologies</h2>
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
@@ -74,7 +75,7 @@
       </v-row>
     </v-container>
   <!--  about section-->
-  <v-container id="About" style="font-family: 'Space Grotesk'">
+  <v-container id="About" style="font-family: 'Mukta'">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">About</h2>
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
@@ -138,15 +139,24 @@
         </v-col>
       </v-row>
     </div>
-
   </v-container>
   <!--  resume section-->
-  <v-container id="Resume" style="padding-bottom: 0px; font-family: 'Space Grotesk'">
+  <v-container id="Resume" style="padding-bottom: 0px; font-family: 'Mukta'">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />
     <br>
-    <v-divider color="#f4f2f5" thickness="3" style="padding-top: 5px" class="divider-wt line-gradient"></v-divider>
+    <v-divider color="#f4f2f5" thickness="2" style="padding-top: 5px" class="divider-wt line-gradient"></v-divider>
+    <div style="display: flex; padding-bottom: 20px;">
+        <div style="flex-basis: 25%; padding: 15px 40px;">
+          <h5 style="padding-bottom: 8px">call</h5>
+          <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300;" href="tel:602-625-2342">602-615-2342</a>
+        </div>
+        <div style="flex-basis: 25%; padding: 15px 40px;">
+          <h5 style="padding-bottom: 8px">email</h5>
+          <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300;" href="mailto:gonganna01@aol.com">gonganna01@aol.com</a>
+        </div>
+    </div>
   </v-container>
   <!--  footer section-->
 </template>
@@ -183,19 +193,33 @@ export default {
 <style scoped>
 h1{
   font-size: 40pt;
+  font-weight: 800;
   color: #DBE0E9;
   margin-left: 50px;
 }
 h2{
   font-size: 36pt;
+  font-weight: 700;
   color: #DBE0E9;
 }
 h3 {
   font-size: 25pt;
+  font-weight: 600;
   color: #DBE0E9;
 }
+h4 {
+  font-size: 20pt;
+  font-weight: 500;
+  color: #DBE0E9;
+}
+h5{
+  font-size: 14pt;
+  font-weight: 400;
+  color: #9e9e9e;
+}
 p{
-  font-size: 13pt;
+  font-size: 14pt;
+  font-weight: 400;
   line-height: 1.75;
   color: #7b838f;
   margin: 3px 80px;
@@ -214,6 +238,7 @@ p{
 .intro-p{
   font-size: 15pt;
   line-height: 1.8;
+  font-weight: 500;
   color: #7b838f;
   margin-left: 120px;
   margin-right: 400px;

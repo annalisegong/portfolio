@@ -1,5 +1,5 @@
 <template>
-  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Space Grotesk'">
+  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Mukta'">
     <v-card class="resume-card">
       <v-img src="src/assets/resume.png" class="img-size"/>
       <div style="display: flex;justify-content: center; align-items: center">
@@ -45,6 +45,7 @@ export default {
   color: #f0f0f0;
   color: #DBE0E9;
   font-size: 18pt;
+  font-weight: 400;
   line-height: 1.5;
   text-transform: none;
 }

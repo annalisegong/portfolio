@@ -1,5 +1,5 @@
 <template>
-  <v-card class="t-card-style" style="font-family: 'Space Grotesk'">
+  <v-card class="t-card-style" style="font-family: 'Mukta'">
     <v-card-title class="t-card-title">
       <div class="year-line">
         <div class="year">{{year}}</div>
@@ -38,14 +38,17 @@ export default {
   margin-right: 10px;
 }
 .t-card-title{
-  background: linear-gradient(to right, #DBE0E9, #7c60bd);
+  background: linear-gradient(to right, #DBE0E9, #7c60bd, #7c60bd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 16pt;
+  font-size: 20pt;
+  font-weight: 600;
   text-align: left;
 }
 .t-card-text{
-  font-size: 10pt;
+  font-size: 12pt;
+  font-weight: 200;
+  line-height: 1.3;
   color: #DBE0E9;
   text-align: left;
   padding: 2px 2px 0px 15px;

@@ -3,7 +3,7 @@
       <v-card-title class="tech-card-title">
         {{title}}
       </v-card-title>
-      <v-card-text style="display: flex; flex-wrap: wrap; justify-content: center; margin: 5px; color: #DBE0E9">
+      <v-card-text class="tech-card-text">
         <div v-for="(item, index) in items" :key="index" class="stack-item">
           {{ item }}
         </div>
@@ -33,14 +33,25 @@
 
 .stack-item {
   line-height: 1.75;
+  font-size: 13pt;
+  font-weight: 300;
   flex-basis: 50%;
+  color: #DBE0E9;
 }
 .tech-card-title{
-  background: linear-gradient(to right, #DBE0E9, #4bbedb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  //background: linear-gradient(to right, #DBE0E9, #347296);
+  //-webkit-background-clip: text;
+  //-webkit-text-fill-color: transparent;
+  color: #69b0c2;
   text-align: center;
-  font-size:18pt
+  font-size:20pt;
+  font-weight: 500;
+}
+.tech-card-text{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
 }
 
 @media (max-width: 700px) {

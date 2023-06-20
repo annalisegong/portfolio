@@ -1,5 +1,5 @@
 <template>
-    <v-card class="main-card" style="font-family: 'Space Grotesk'">
+  <v-card class="main-card" style="font-family: 'Mukta'">
       <v-card-title class="p-card-title">{{ title }}</v-card-title>
       <v-img max-height="250px" :src="url" style="padding: 10px"/>
       <v-card-actions class="justify-center" style="padding: 10px">
@@ -25,7 +25,7 @@
       </div>
 <!-- get stack to start at same spot on -->
       <div class="stack-container">
-        <h4 style="text-align: center; color:  #7c60bd; font-size: 14pt">Stack</h4>
+        <h4 style="text-align: center; color: #DBE0E9; font-size: 14pt; font-weight: 600">Stack</h4>
         <div class="stack-settings">
           <span v-for="(item, index) in items" :key="index" style="margin-right: 22px;">{{ item }}</span>
         </div>
@@ -64,19 +64,26 @@ export default {
   color: #DBE0E9;
   text-align: center;
   font-size: 22pt;
+  font-weight: 600;
   white-space: break-spaces;
   word-break: break-word;
 }
 .p-card-text{
   line-height: 1.75;
-  min-height: 230px;
+  min-height: 250px;
+  font-weight: 200;
   margin: 0px 20px;
   color: #DBE0E9;
+  font-size: 13pt;
 }
 .p-card-btn{
   background: linear-gradient(to right, #4a2a6d, #8b5cc0);
   color:#f4f2f5;
-  line-height: 1.5;
+  margin: 2px 10px;
+  padding: 3px 8px;
+  line-height: 2;
+  font-size: 12pt;
+  font-weight: 400;
   text-transform: none;
 }
 .stack-container {
@@ -92,6 +99,9 @@ export default {
   justify-content: center;
   padding: 10px;
   height: 50px;
+  font-size: 12pt;
+  font-weight: 300;
+  color: #bd9d60;
 }
 
 </style>

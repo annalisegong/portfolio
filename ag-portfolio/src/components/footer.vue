@@ -1,5 +1,5 @@
 <template>
-  <v-container class="footer-style" style="font-family: 'Space Grotesk'">
+  <v-container class="footer-style" style="font-family: 'Mukta'">
     <v-row style="align-items: center">
       <h5>An investment in knowledge pays the best interest</h5>
       <v-spacer></v-spacer>
@@ -45,11 +45,13 @@
   justify-content: center;
   text-transform: none;
   text-decoration: none;
-//margin-left: 2px;
-//margin-right: 2px;
   color: #DBE0E9;
   background-color: transparent;
   box-shadow: none;
   font-size: 18pt;
+}
+h5{
+  font-size: 12pt;
+  font-weight: 400;
 }
 </style>
