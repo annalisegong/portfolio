@@ -6,13 +6,14 @@
     <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
     <h1 class="text-gradient">Welcome to my Portfolio</h1>
     <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
-    <v-btn rounded height="60" min-width="200" href="#About" class="intro-btn">Learn More</v-btn>
+    <v-btn rounded height="60" min-width="200" href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
   </v-container>
   <!--  projects section-->
-  <v-container id="Projects" style="font-family: 'Mukta'">
+  <v-container id="Projects"
+               style="font-family: 'Mukta'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
-      <v-row justify="space-evenly" style="padding-top: 40px">
+      <v-row justify="space-evenly" style="padding-top: 40px" v-show="display" class="animated slideInLeft">
         <v-col class="project-col">
           <ProjectCard
             title="Tic Tac Toe App"
@@ -167,6 +168,9 @@ import TechCard from "@/components/techCard.vue";
 import AccomplishmentCard from "@/components/accomplishmentCard.vue";
 import ResumeCard from "@/components/resumeCard.vue";
 import TimeCard from "@/components/timeCard.vue";
+import VueScrollTo from 'vue-scrollto';
+import 'animate.css';
+
 export default {
   name: 'MainBody',
   components: {
@@ -174,11 +178,13 @@ export default {
     TechCard,
     AccomplishmentCard,
     ResumeCard,
-    TimeCard
+    TimeCard,
+    VueScrollTo
   },
 
   data(){
     return{
+      display: false,
       p1Stack: ['Unity', 'Visual Studio Code', 'Procreate'],
       p2Stack: ['HTML', 'CSS', 'JavaScript', 'XAMPP'],
       p3Stack: ['Linux', 'Nginx', 'MySQL', 'PHP'],
@@ -186,8 +192,24 @@ export default {
       frameworks: ['Vue', 'Laravel', 'Blade Template', 'Angular', 'Express', 'Node.js'],
       languages: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python']
     };
-  }
-}
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const element = document.getElementById('Projects');
+      const rect = element.getBoundingClientRect();
+      const visible = rect.top < window.innerHeight;
+      if (visible) {
+        this.display = true;
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -226,7 +248,7 @@ p{
   padding: 5px 10px 20px 10px;
 }
 .text-gradient{
-  background: linear-gradient(to right, #DBE0E9, #605f61);
+  background: linear-gradient(to right, #DBE0E9, #48444f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -261,7 +283,6 @@ p{
 .timeline-container {
   position: relative;
 }
-
 .timeline-row::before {
   content: "";
   position: absolute;
@@ -272,12 +293,10 @@ p{
   background-color: #DBE0E9; /* Adjust the color as desired */
   z-index: -1;
 }
-
 .timeline-row v-col {
   position: relative;
   z-index: 1;
 }
-
 .timeline-row v-col:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -292,10 +311,11 @@ p{
   max-width: 25%;
   min-height: 180px;
 }
-
 .time-card-size{
   max-width: 20%;
   margin: 0px 8px;
 }
-
+.slideInLeft {
+  animation-duration: 100s;
+}
 </style>

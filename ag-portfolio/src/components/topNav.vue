@@ -8,16 +8,16 @@
           logo goes here
         </v-col>
         <v-col>
-          <a href="#Projects" style="text-decoration: none;" @click="scrollToSection('Projects')"><h4>Projects</h4></a>
+          <a href="#Projects" style="text-decoration: none;"  v-scroll-to="{el:'#Projects', duration:1000}"><h4>Projects</h4></a>
         </v-col>
         <v-col>
-          <a href="#Technologies" style="text-decoration: none" @click="scrollToSection('Technologies')"><h4>Technologies</h4></a>
+          <a href="#Technologies" style="text-decoration: none" v-scroll-to="{el:'#Technologies', duration:1000}"><h4>Technologies</h4></a>
         </v-col>
         <v-col>
-          <a href="#About" style="text-decoration: none" @click="scrollToSection('About')"><h4>About</h4></a>
+          <a href="#About" style="text-decoration: none" v-scroll-to="{el:'#About', duration:1000}"><h4>About</h4></a>
         </v-col>
         <v-col>
-          <a href="#Resume" style="text-decoration: none" @click="scrollToSection('Resume')"><h4>Resume</h4></a>
+          <a href="#Resume" style="text-decoration: none" v-scroll-to="{el:'#Resume', duration:1000}"><h4>Resume</h4></a>
         </v-col>
 <!-- add instagram link href-->
           <v-btn href="https://github.com/annalisegong?tab=repositories"
@@ -42,10 +42,12 @@
 <script>
 import SvgIcon from '@jamescoyle/vue-icon'
 import {mdiAccount} from '@mdi/js'
+import VueScrollTo from 'vue-scrollto'
 export default {
   name: 'TopNav',
   components:{
-    SvgIcon
+    SvgIcon,
+    VueScrollTo
   },
   props: {
   },
@@ -53,18 +55,6 @@ export default {
     return{
       labels: ['Projects', 'Technologies', 'About','Resume'],
       path: mdiAccount
-    }
-  },
-  methods: {
-    scrollToSection(sectionId) {
-      const section = document.querySelector(sectionId);
-      if (section) {
-        section.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          duration: 2000
-        });
-      }
     }
   }
 }
