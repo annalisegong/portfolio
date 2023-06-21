@@ -8,10 +8,10 @@
         <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
         <h1 class="text-gradient">Welcome to my Portfolio</h1>
         <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
-        <v-btn rounded height="60" min-width="200" href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
+        <v-btn rounded href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
       </div>
       <div style="text-align: right;">
-        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_CR23KK4W5R.json"  background="transparent"  speed="1"  style="width: 400px; height: 300px;"  loop  autoplay></lottie-player>
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_CR23KK4W5R.json"  background="transparent"  speed="1"  class="animation"  loop  autoplay></lottie-player>
       </div>
     </div>
   </v-container>
@@ -20,39 +20,7 @@
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
-        <v-col class="project-col">
-          <ProjectCard
-            title="Tic Tac Toe App"
-            url="src/assets/tictactoe.png"
-            :items="p1Stack"
-            text="Tic Tac Toe is a simple web application that I worked on as the main programmer among a team of three other novice programmers. This project was completed within a four month time period and was developed on the Unity Game Engine. It is currently available for free download, and consists of a computerized opponent for three levels of difficulty. This project has led me to explore careers involving mobile app or game development."
-            code="https://github.com/annalisegong/TicTacToe"
-            bName="download"
-            download="https://annalisegong.itch.io/tic-tac-toe-csc-370"/>
-        </v-col>
-        <v-col class="project-col">
-          <ProjectCard
-            title="Circle B Redesign"
-            url="src/assets/circleBLogo.png"
-            :items="p2Stack"
-            text="Circle B Redesign was inspired by the final project for Advanced Database and Web Development. The current website for this local bowling alley appears a bit outdated so I created a local project using front end web development tools to implement a dynamic and more modern looking UI. This project in particular piqued my interest in full stack development."
-            code="https://github.com/annalisegong/CircleB"
-            bName="video"
-            download="src/assets/CSC460FinalProject.mp4"/>
-        </v-col>
-  <!--update download link to new video of changed circle B when i finish it-->
-        <v-col class="project-col">
-          <ProjectCard
-            title="Referral Transfer"
-            url="src/assets/splashLogo.png"
-            :items="p3Stack"
-            text="Details soon to come"
-            code="#"
-            bName="TBD"
-            download="#"
-          />
-        </v-col>
-  <!--      finish this card at the end of internship-->
+          <ProjectCard :projects="projects" class="project-col" />
       </v-row>
     </v-container>
   <!-- tech section-->
@@ -192,9 +160,35 @@ export default {
   data(){
     return{
       display: false,
-      p1Stack: ['Unity', 'Visual Studio Code', 'Procreate'],
-      p2Stack: ['HTML', 'CSS', 'JavaScript', 'XAMPP'],
-      p3Stack: ['Linux', 'Nginx', 'MySQL', 'PHP'],
+      projects: [
+        {
+          title: 'Tic Tac Toe App',
+          url: 'src/assets/tictactoe.png',
+          items: ['Unity', 'Visual Studio Code', 'Procreate'],
+          text: 'Tic Tac Toe is a simple web application that I worked on as the main programmer among a team of three other novice programmers. This project was completed within a four-month time period and was developed on the Unity Game Engine. It is currently available for free download, and consists of a computerized opponent for three levels of difficulty. This project has led me to explore careers involving mobile app or game development.',
+          code: 'https://github.com/annalisegong/TicTacToe',
+          bName: 'download',
+          download: 'https://annalisegong.itch.io/tic-tac-toe-csc-370'
+        },
+        {
+          title: 'Circle B Redesign',
+          url: 'src/assets/circleBLogo.png',
+          items: ['HTML', 'CSS', 'JavaScript', 'XAMPP'],
+          text: 'Circle B Redesign was inspired by the final project for Advanced Database and Web Development. The current website for this local bowling alley appears a bit outdated, so I created a local project using front-end web development tools to implement a dynamic and more modern-looking UI. This project, in particular, piqued my interest in full-stack development.',
+          code: 'https://github.com/annalisegong/CircleB',
+          bName: 'video',
+          download: 'src/assets/CSC460FinalProject.mp4'
+        },
+        {
+          title: 'Referral Site Transfer',
+          url: 'src/assets/splashLogo.png',
+          items: ['Linux', 'Nginx', 'MySQL', 'PHP'],
+          text: 'Details coming soon ...',
+          code: '#',
+          bName: 'TBD',
+          download: '#'
+        }
+      ],
       programs: ['MacOS', 'Windows', 'Linux', 'Unity Game Engine', 'Visual Studio Code', 'PHP Storm', 'MySQL Workbench', 'MongoDB', 'Github', 'Bitbucket', 'Source Tree', 'XAMPP', 'VirtualBox', 'Postman'],
       frameworks: ['Vue', 'Laravel', 'Blade Template', 'Angular', 'Express', 'Node.js'],
       languages: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python']
@@ -206,6 +200,7 @@ export default {
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
+  // allows slow scrolling on menu click
   methods: {
     handleScroll() {
       const element = document.getElementById('Projects');
@@ -220,107 +215,343 @@ export default {
 </script>
 
 <style scoped>
-h1{
-  font-size: 40pt;
-  font-weight: 800;
-  color: #DBE0E9;
-  margin-left: 50px;
+/* laptop desk size; need to write style for bigger than 2000px so nothing gets bigger*/
+@media (min-width: 1281px) and (max-width: 2000px){
+  h1{
+    font-size: 40pt;
+    font-weight: 800;
+    color: #DBE0E9;
+    margin-left: 50px;
+  }
+  h2{
+    font-size: 36pt;
+    font-weight: 700;
+    color: #DBE0E9;
+  }
+  h3 {
+    font-size: 25pt;
+    font-weight: 600;
+    color: #DBE0E9;
+  }
+  h4 {
+    font-size: 20pt;
+    font-weight: 500;
+    color: #DBE0E9;
+  }
+  h5{
+    font-size: 14pt;
+    font-weight: 400;
+    color: #9e9e9e;
+  }
+  p{
+    font-size: 14pt;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #7b838f;
+    margin: 3px 80px;
+    padding: 5px 10px 20px 10px;
+  }
+  .intro-p{
+    font-size: 15pt;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #7b838f;
+    max-width: 75%;
+    margin: 0px 120px;
+    padding: 5px 20px
+  }
+  .intro-btn{
+    margin-top: 15px;
+    margin-left: 50px;
+    min-height: 60px;
+    min-width: 200px;
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    color: #f0f0f0;
+    text-transform: none;
+    font-size: 15pt
+  }
+  .animation{
+    width: 400px;
+    height: 300px;
+  }
+  .divider-wt{
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+  .project-col{
+    width: 33.33%;
+  }
+  .timeline-container {
+    position: relative;
+  }
+  .timeline-row::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .timeline-row v-col {
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-row v-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(50% - 10px);
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .a-card-size{
+    max-width: 25%;
+    min-height: 180px;
+  }
+  .time-card-size{
+    max-width: 20%;
+    margin: 0px 8px;
+  }
+  .text-gradient{
+    background: linear-gradient(to right, #DBE0E9, #48444f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .line-gradient{
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
-h2{
-  font-size: 36pt;
-  font-weight: 700;
-  color: #DBE0E9;
+/* screen size bigger than iphone less than laptop */
+@media (min-width: 701px) and (max-width: 1280px){
+  h1{
+    font-size: 28pt;
+    font-weight: 800;
+    color: #DBE0E9;
+    margin-left: 50px;
+  }
+  h2{
+    font-size: 24pt;
+    font-weight: 700;
+    color: #DBE0E9;
+  }
+  h3 {
+    font-size: 20pt;
+    font-weight: 600;
+    color: #DBE0E9;
+  }
+  h4 {
+    font-size: 15pt;
+    font-weight: 500;
+    color: #DBE0E9;
+  }
+  h5{
+    font-size: 12pt;
+    font-weight: 400;
+    color: #9e9e9e;
+  }
+  p{
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #7b838f;
+    margin: 3px 80px;
+    padding: 5px 10px 20px 10px;
+  }
+  .intro-p{
+    font-size: 12pt;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #7b838f;
+    min-width: 75%;
+    margin: 0px 100px;
+    padding: 5px 10px
+  }
+  .intro-btn{
+    margin-top: 15px;
+    margin-left: 50px;
+    min-height: 55px;
+    min-width: 175px;
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    color: #f0f0f0;
+    text-transform: none;
+    font-size: 15pt
+  }
+  .animation{
+    width: 300px;
+    height: 200px;
+  }
+  .divider-wt{
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+  .project-col{
+    width: 50%;
+  }
+  .timeline-container {
+    position: relative;
+  }
+  .timeline-row::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .timeline-row v-col {
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-row v-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(50% - 10px);
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .a-card-size{
+    max-width: 25%;
+    min-height: 180px;
+  }
+  .time-card-size{
+    max-width: 20%;
+    margin: 0px 8px;
+  }
+  .text-gradient{
+    background: linear-gradient(to right, #DBE0E9, #48444f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .line-gradient{
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
-h3 {
-  font-size: 25pt;
-  font-weight: 600;
-  color: #DBE0E9;
+/* iphone screen size */
+@media (min-width: 375px) and (max-width: 700px){
+  h1{
+    font-size: 20pt;
+    font-weight: 700;
+    color: #DBE0E9;
+    margin-left: 50px;
+  }
+  h2{
+    font-size: 24pt;
+    font-weight: 700;
+    color: #DBE0E9;
+  }
+  h3 {
+    font-size: 20pt;
+    font-weight: 600;
+    color: #DBE0E9;
+  }
+  h4 {
+    font-size: 15pt;
+    font-weight: 500;
+    color: #DBE0E9;
+  }
+  h5{
+    font-size: 12pt;
+    font-weight: 400;
+    color: #9e9e9e;
+  }
+  p{
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #7b838f;
+    margin: 3px 80px;
+    padding: 5px 10px 20px 10px;
+  }
+  .intro-p{
+    font-size: 12pt;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #7b838f;
+    min-width: 75%;
+    margin: 0px 80px;
+    padding: 5px 10px
+  }
+  .intro-btn{
+    margin-top: 14px;
+    margin-left: 50px;
+    min-height: 45px;
+    min-width: 150px;
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    color: #f0f0f0;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 13pt
+  }
+  .animation{
+    width: 250px;
+    height: 200px;
+  }
+  .divider-wt{
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+  .project-col{
+    width: 33.33%;
+  }
+  .timeline-container {
+    position: relative;
+  }
+  .timeline-row::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .timeline-row v-col {
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-row v-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(50% - 10px);
+    height: 2px;
+    background-color: #DBE0E9; /* Adjust the color as desired */
+    z-index: -1;
+  }
+  .a-card-size{
+    max-width: 25%;
+    min-height: 180px;
+  }
+  .time-card-size{
+    max-width: 20%;
+    margin: 0px 8px;
+  }
+  .text-gradient{
+    background: linear-gradient(to right, #DBE0E9, #48444f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .line-gradient{
+    background: linear-gradient(to right, #923fb8, #4bbedb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
-h4 {
-  font-size: 20pt;
-  font-weight: 500;
-  color: #DBE0E9;
-}
-h5{
-  font-size: 14pt;
-  font-weight: 400;
-  color: #9e9e9e;
-}
-p{
-  font-size: 14pt;
-  font-weight: 400;
-  line-height: 1.75;
-  color: #7b838f;
-  margin: 3px 80px;
-  padding: 5px 10px 20px 10px;
-}
-.text-gradient{
-  background: linear-gradient(to right, #DBE0E9, #48444f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.line-gradient{
-  background: linear-gradient(to right, #923fb8, #4bbedb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.intro-p{
-  font-size: 15pt;
-  line-height: 1.8;
-  font-weight: 500;
-  color: #7b838f;
-  max-width: 75%;
-  margin: 0px 120px;
-  padding: 5px 20px
-}
-.intro-btn{
-  margin-top: 15px;
-  margin-left: 50px;
-  background: linear-gradient(to right, #923fb8, #4bbedb);
-  color: #f0f0f0;
-  text-transform: none;
-  font-size: 15pt
-}
-.divider-wt{
-  padding-top: 25px;
-  padding-bottom: 0px;
-}
-.project-col{
-  width: 33.33%;
-}
-.timeline-container {
-  position: relative;
-}
-.timeline-row::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #DBE0E9; /* Adjust the color as desired */
-  z-index: -1;
-}
-.timeline-row v-col {
-  position: relative;
-  z-index: 1;
-}
-.timeline-row v-col:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: calc(50% - 10px);
-  height: 2px;
-  background-color: #DBE0E9; /* Adjust the color as desired */
-  z-index: -1;
-}
-.a-card-size{
-  max-width: 25%;
-  min-height: 180px;
-}
-.time-card-size{
-  max-width: 20%;
-  margin: 0px 8px;
-}
+
+
 </style>
