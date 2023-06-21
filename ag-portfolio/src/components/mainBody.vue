@@ -30,22 +30,7 @@
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
       <v-row>
         <v-col class="project-col">
-          <tech-card
-            title="Programming Languages"
-            :items="languages">
-          </tech-card>
-        </v-col>
-        <v-col class="project-col">
-          <tech-card
-            title="Programs/Systems"
-            :items="programs">
-          </tech-card>
-        </v-col>
-        <v-col class="project-col">
-          <tech-card
-            title="Frameworks"
-            :items="frameworks">
-          </tech-card>
+          <tech-card :technologies="technologies" />
         </v-col>
       </v-row>
     </v-container>
@@ -189,9 +174,20 @@ export default {
           download: '#'
         }
       ],
-      programs: ['MacOS', 'Windows', 'Linux', 'Unity Game Engine', 'Visual Studio Code', 'PHP Storm', 'MySQL Workbench', 'MongoDB', 'Github', 'Bitbucket', 'Source Tree', 'XAMPP', 'VirtualBox', 'Postman'],
-      frameworks: ['Vue', 'Laravel', 'Blade Template', 'Angular', 'Express', 'Node.js'],
-      languages: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python']
+      technologies: [
+        {
+          title: 'Programming Languages',
+          items: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python']
+        },
+        {
+          title: 'Programs / Systems',
+          items: ['MacOS', 'Windows', 'Linux', 'MongoDB', 'Github', 'Bitbucket', 'XAMPP', 'VirtualBox', 'Postman', 'PHP Storm', 'Source Tree', 'Unity Game Engine', 'Visual Studio Code', 'MySQL Workbench']
+        },
+        {
+          title: 'Frameworks',
+          items: ['Vue', 'Laravel', 'Angular', 'Express', 'Node.js', 'Blade Template']
+        }
+      ]
     };
   },
   mounted() {
