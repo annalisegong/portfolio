@@ -2,18 +2,24 @@
 <!--  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">-->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
-  <v-container display:flex style="font-family: 'Mukta'">
-    <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
-    <h1 class="text-gradient">Welcome to my Portfolio</h1>
-    <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
-    <v-btn rounded height="60" min-width="200" href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
+  <v-container display:flex style="font-family: 'Mukta'; align-items: center">
+    <div style="display: grid; grid-template-columns: 1fr auto;">
+      <div>
+        <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
+        <h1 class="text-gradient">Welcome to my Portfolio</h1>
+        <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
+        <v-btn rounded height="60" min-width="200" href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
+      </div>
+      <div style="text-align: right;">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_CR23KK4W5R.json"  background="transparent"  speed="1"  style="width: 400px; height: 300px;"  loop  autoplay></lottie-player>
+      </div>
+    </div>
   </v-container>
   <!--  projects section-->
-  <v-container id="Projects"
-               style="font-family: 'Mukta'">
+  <v-container id="Projects" style="font-family: 'Mukta'">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
-      <v-row justify="space-evenly" style="padding-top: 40px" v-show="display" class="animated slideInLeft">
+      <v-row justify="space-evenly" style="padding-top: 40px">
         <v-col class="project-col">
           <ProjectCard
             title="Tic Tac Toe App"
@@ -171,6 +177,7 @@ import TimeCard from "@/components/timeCard.vue";
 import VueScrollTo from 'vue-scrollto';
 import 'animate.css';
 
+
 export default {
   name: 'MainBody',
   components: {
@@ -262,8 +269,9 @@ p{
   line-height: 1.8;
   font-weight: 500;
   color: #7b838f;
-  margin-left: 120px;
-  margin-right: 400px;
+  max-width: 75%;
+  margin: 0px 120px;
+  padding: 5px 20px
 }
 .intro-btn{
   margin-top: 15px;
@@ -314,8 +322,5 @@ p{
 .time-card-size{
   max-width: 20%;
   margin: 0px 8px;
-}
-.slideInLeft {
-  animation-duration: 100s;
 }
 </style>
