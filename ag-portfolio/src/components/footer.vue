@@ -1,5 +1,5 @@
 <template>
-  <v-container class="footer-style" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
+  <v-container class="footer-style" style="font-family: Mukta, Space-Grotesk, sans-serif">
     <v-row style="align-items: center">
       <h5>An investment in knowledge pays the best interest</h5>
       <v-spacer></v-spacer>

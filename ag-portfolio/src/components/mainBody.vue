@@ -2,7 +2,7 @@
 <!--  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">-->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
-  <v-container display:flex style="font-family: 'Mukta', 'Space Grotesk', sans-serif; align-items: center">
+  <v-container display:flex style="font-family: Mukta, Space-Grotesk, sans-serif; align-items: center">
     <div style="display: grid; grid-template-columns: 1fr auto;">
       <div>
         <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
@@ -187,7 +187,7 @@ export default {
 
 <style scoped>
 /* laptop desk size; need to write style for bigger than 2000px so nothing gets bigger*/
-@media (min-width: 1281px) and (max-width: 2000px){
+@media (min-width: 1281px) and (max-width: 9300px){
   h1{
     font-size: 40pt;
     font-weight: 800;

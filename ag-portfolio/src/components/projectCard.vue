@@ -1,7 +1,7 @@
 <template>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 100%;">
     <div v-for="p in projects" :key="p.title" class="p-card">
-      <v-card class="main-card" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
+      <v-card class="main-card" style="font-family: Mukta, Space-Grotesk, sans-serif">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>
         <v-img :src="p.url" class="p-card-img"/>
         <v-card-actions class="justify-center" style="padding: 10px">
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 1281px) and (max-width: 2000px) {
+@media (min-width: 1281px) and (max-width: 3000px) {
   .main-card {
     min-width: 100%;
     min-height: 100%;

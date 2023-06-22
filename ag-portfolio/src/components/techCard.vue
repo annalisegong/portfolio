@@ -24,7 +24,7 @@
 </script>
 
 <style scoped>
-@media (min-width: 1281px) and (max-width: 2000px)
+@media (min-width: 1281px) and (max-width: 3000px)
 {
   .tech-card{
     background-color:#1e1d2b;

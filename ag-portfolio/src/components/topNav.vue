@@ -1,11 +1,12 @@
 <template>
   <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-  <v-container class="menu-background" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
+  <v-container class="menu-background" style="font-family: Mukta, Space-Grotesk, sans-serif">
       <v-row no-gutters
              class="justify-space text-center"
              style="min-width: 100%; min-height: 100%; align-items: center;">
-        <v-col>
-          logo goes here
+        <v-col style="display: flex; align-items: center;">
+          <v-icon style="margin: 0 4px">mdi-star-three-points-outline</v-icon>
+          <h4 style="color: #DBE0E9">Portfolio</h4>
         </v-col>
         <v-col>
           <a href="#Projects" style="text-decoration: none;"  v-scroll-to="{el:'#Projects', duration:1000}"><h4>Projects</h4></a>
@@ -62,7 +63,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media (min-width: 1281px) and (max-width: 2000px){
+@media (min-width: 1281px) and (max-width: 3000px){
   h4 {
     font-size: 16pt;
     color: #9e9e9e;

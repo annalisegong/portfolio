@@ -1,5 +1,5 @@
 <template>
-  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Mukta', 'Space Grotesk', sans-serif">
+  <div style="display:flex; justify-content: center; align-items: center; font-family: Mukta, Space-Grotesk, sans-serif">
     <v-card class="resume-card">
       <v-img src="src/assets/resume.png" class="img-size"/>
       <div style="display: flex;justify-content: center; align-items: center">
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 1281px) and (max-width: 2000px) {
+@media (min-width: 1281px) and (max-width: 3000px) {
   .resume-card{
     min-width: 90%;
     min-height: 100%;
