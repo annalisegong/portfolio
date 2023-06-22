@@ -1,7 +1,7 @@
 <template>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 100%;">
     <div v-for="p in projects" :key="p.title" class="p-card">
-      <v-card class="main-card" style="font-family: 'Mukta'">
+      <v-card class="main-card" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>
         <v-img :src="p.url" class="p-card-img"/>
         <v-card-actions class="justify-center" style="padding: 10px">
@@ -78,7 +78,7 @@ export default {
   .p-card-text {
     line-height: 1.75;
     font-weight: 300;
-    margin: 0px 20px;
+    margin: 0 20px;
     color: #DBE0E9;
     font-size: 13pt;
   }
@@ -142,7 +142,7 @@ export default {
   .p-card-text{
     line-height: 1.5;
     font-weight: 300;
-    margin: 0px 20px;
+    margin: 0 20px;
     color: #DBE0E9;
     font-size: 12pt;
   }
@@ -204,7 +204,7 @@ export default {
   .p-card-text{
     line-height: 1.5;
     font-weight: 300;
-    margin: 0px 20px;
+    margin: 0 20px;
     color: #DBE0E9;
     font-size: 12pt;
   }

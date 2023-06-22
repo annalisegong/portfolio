@@ -2,7 +2,7 @@
 <!--  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">-->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
-  <v-container display:flex style="font-family: 'Mukta'; align-items: center">
+  <v-container display:flex style="font-family: 'Mukta', 'Space Grotesk', sans-serif; align-items: center">
     <div style="display: grid; grid-template-columns: 1fr auto;">
       <div>
         <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
@@ -51,7 +51,7 @@
     </div>
   </v-container>
   <!--  resume section-->
-  <v-container id="Resume" style="padding-bottom: 0px; font-family: 'Mukta'">
+  <v-container id="Resume" style="padding-bottom: 0; font-family: 'Mukta'">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />
@@ -60,7 +60,7 @@
     <div style="display: flex; padding-bottom: 20px;">
         <div style="flex-basis: 25%; padding: 15px 40px;">
           <h5 style="padding-bottom: 8px">call</h5>
-          <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300;" href="tel:602-625-2342">602-615-2342</a>
+          <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300; white-space: nowrap; min-width: 90%" href="tel:602-625-2342">602-615-2342</a>
         </div>
         <div style="flex-basis: 25%; padding: 15px 40px;">
           <h5 style="padding-bottom: 8px">email</h5>
@@ -68,7 +68,6 @@
         </div>
     </div>
   </v-container>
-  <!--  footer section-->
 </template>
 
 <script>
@@ -79,7 +78,6 @@ import ResumeCard from "@/components/resumeCard.vue";
 import TimeCard from "@/components/timeCard.vue";
 import VueScrollTo from 'vue-scrollto';
 import 'animate.css';
-
 
 export default {
   name: 'MainBody',
@@ -230,7 +228,7 @@ export default {
     font-weight: 500;
     color: #7b838f;
     max-width: 75%;
-    margin: 0px 120px;
+    margin: 0 120px;
     padding: 5px 20px
   }
   .intro-btn{
@@ -249,7 +247,7 @@ export default {
   }
   .divider-wt{
     padding-top: 25px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -304,7 +302,7 @@ export default {
     font-weight: 500;
     color: #7b838f;
     min-width: 75%;
-    margin: 0px 100px;
+    margin: 0 100px;
     padding: 5px 10px
   }
   .intro-btn{
@@ -323,11 +321,7 @@ export default {
   }
   .divider-wt{
     padding-top: 25px;
-    padding-bottom: 0px;
-  }
-  .a-card-size{
-    max-width: 25%;
-    min-height: 180px;
+    padding-bottom: 0;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -382,7 +376,7 @@ export default {
     font-weight: 500;
     color: #7b838f;
     min-width: 75%;
-    margin: 0px 80px;
+    margin: 0 80px;
     padding: 5px 10px
   }
   .intro-btn{
@@ -402,45 +396,7 @@ export default {
   }
   .divider-wt{
     padding-top: 25px;
-    padding-bottom: 0px;
-  }
-  .project-col{
-    width: 33.33%;
-  }
-  .timeline-container {
-    position: relative;
-  }
-  .timeline-row::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
-  }
-  .timeline-row v-col {
-    position: relative;
-    z-index: 1;
-  }
-  .timeline-row v-col:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: calc(50% - 10px);
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
-  }
-  .a-card-size{
-    max-width: 25%;
-    min-height: 180px;
-  }
-  .time-card-size{
-    max-width: 20%;
-    margin: 0px 8px;
+    padding-bottom: 0;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -453,6 +409,4 @@ export default {
     -webkit-text-fill-color: transparent;
   }
 }
-
-
 </style>

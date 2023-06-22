@@ -1,5 +1,5 @@
 <template>
-  <v-container class="footer-style" style="font-family: 'Mukta'">
+  <v-container class="footer-style" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
     <v-row style="align-items: center">
       <h5>An investment in knowledge pays the best interest</h5>
       <v-spacer></v-spacer>
@@ -53,5 +53,17 @@
 h5{
   font-size: 12pt;
   font-weight: 400;
+  margin: 2px 8px;
+}
+@media (min-width: 375px) and (max-width: 700px){
+  h5{
+    font-size: 10pt;
+    font-weight: 400;
+  }
+  .btn-style {
+    width: 60px;
+    height: 60px;
+    font-size: 15pt;
+  }
 }
 </style>

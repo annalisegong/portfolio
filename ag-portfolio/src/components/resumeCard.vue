@@ -1,5 +1,5 @@
 <template>
-  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Mukta'">
+  <div style="display:flex; justify-content: center; align-items: center; font-family: 'Mukta', 'Space Grotesk', sans-serif">
     <v-card class="resume-card">
       <v-img src="src/assets/resume.png" class="img-size"/>
       <div style="display: flex;justify-content: center; align-items: center">
@@ -44,7 +44,6 @@ export default {
   .r-card-btn{
     background: linear-gradient(to right, #3b49a3, #4bbedb);
     color: #f0f0f0;
-    color: #DBE0E9;
     font-size: 18pt;
     font-weight: 400;
     line-height: 1.5;
@@ -69,7 +68,6 @@ export default {
   .r-card-btn{
     background: linear-gradient(to right, #3b49a3, #4bbedb);
     color: #f0f0f0;
-    color: #DBE0E9;
     font-size: 16pt;
     font-weight: 400;
     line-height: 1.2;
@@ -94,7 +92,6 @@ export default {
   .r-card-btn{
     background: linear-gradient(to right, #3b49a3, #4bbedb);
     color: #f0f0f0;
-    color: #DBE0E9;
     font-size: 14pt;
     font-weight: 300;
     line-height: 1.2;

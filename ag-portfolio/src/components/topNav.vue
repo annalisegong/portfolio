@@ -1,6 +1,6 @@
 <template>
   <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-  <v-container class="menu-background" style="font-family: 'Mukta'">
+  <v-container class="menu-background" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
       <v-row no-gutters
              class="justify-space text-center"
              style="min-width: 100%; min-height: 100%; align-items: center;">
@@ -83,7 +83,7 @@ export default {
     display: flex;
     color: #DBE0E9;
     width: 100%;
-    padding: 20px 0px 50px 0px;
+    padding: 20px 0 50px 0;
   }
   .btn-style{
     width: 60px;
@@ -122,7 +122,7 @@ export default {
     display: flex;
     color: #DBE0E9;
     width: 100%;
-    padding: 20px 0px 40px 0px;
+    padding: 20px 0 40px 0;
   }
   .btn-style{
     width: 40px;
@@ -150,10 +150,10 @@ export default {
   }
   li {
     display: inline-block;
-    margin: 0px;
+    margin: 0;
   }
   a {
-    font-size: 12pt;
+    font-size: 11pt;
     color: #DBE0E9;
   }
   .menu-background{
@@ -175,7 +175,7 @@ export default {
     background-color: transparent;
     box-shadow: none;
     margin-right: 5px;
-    padding: 0px 2px;
+    padding: 0 2px;
   }
 }
 

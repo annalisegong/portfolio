@@ -2,7 +2,7 @@
   <div class="timeline-container">
     <v-row class="time-card-row">
       <div v-for="y in years" :key="y.year" class="time-card-size" style="justify-content: center">
-        <v-card class="t-card-style" style="font-family: 'Mukta'">
+        <v-card class="t-card-style" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
           <v-card-title class="t-card-year">
             <div class="year-line">
               <div class="year">{{y.year}}</div>

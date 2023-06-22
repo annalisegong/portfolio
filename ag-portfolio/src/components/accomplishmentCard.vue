@@ -2,7 +2,7 @@
   <div>
     <v-row style="margin: 10px 30px">
       <v-col v-for="a in accomplishments" :key="a.title" :cols="12" :sm="6" :md="6" :lg="3" :xl="3">
-        <v-card class="a-card a-card-gradient a-card-size" style="font-family: 'Mukta'">
+        <v-card class="a-card a-card-gradient a-card-size" style="font-family: 'Mukta', 'Space Grotesk', sans-serif">
           <v-card-title class="a-title">
             {{a.title}}
           </v-card-title>
