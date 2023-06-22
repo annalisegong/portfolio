@@ -31,7 +31,7 @@
                  class="btn-style">
             <v-icon>mdi-linkedin</v-icon>
           </v-btn>
-          <v-btn href="#"
+          <v-btn href="https://www.instagram.com/annagong4/"
                  target="_blank"
                  class="btn-style">
             <v-icon>mdi-instagram</v-icon>
