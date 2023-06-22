@@ -20,7 +20,7 @@
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
-          <ProjectCard :projects="projects" class="project-col" />
+          <ProjectCard :projects="projects"  />
       </v-row>
     </v-container>
   <!-- tech section-->
@@ -29,9 +29,7 @@
       <h2 class="heading-gradient">Technologies</h2>
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
       <v-row>
-        <v-col class="project-col">
           <tech-card :technologies="technologies" />
-        </v-col>
       </v-row>
     </v-container>
   <!--  about section-->
@@ -47,30 +45,8 @@
     <div id="accomplishments" style="margin-left: 60px;">
       <h3 class="text-gradient" style="padding-bottom: 20px;">Personal Accomplishments</h3>
       <v-row justify="center">
-        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">
-          <AccomplishmentCard
-            title="4+ years"
-            subtitle="46 credits completed"
-            text="in computer science course work"/>
-        </v-col>
-        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">
-          <AccomplishmentCard
-            title="4 degrees"
-            subtitle="earned by Spring 2024:"
-            text="Associate (2) Bachelor (1) Master (1)"/>
-        </v-col>
-        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">
-          <AccomplishmentCard
-            title="2 NACC Honors"
-            subtitle="for lacrosse in 2023"
-            text="Second Team All Conference and CSC Academic All-District"/>
-        </v-col>
-        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">
-          <AccomplishmentCard
-            title="Vice President"
-            subtitle="of Alpha Chi"
-            text="the American Collegiate National Honors Society"/>
-        </v-col>
+<!--        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">-->
+          <AccomplishmentCard :accomplishments="accomplishments" />
       </v-row>
     </div>
   </v-container>
@@ -168,6 +144,26 @@ export default {
         { year: '2022', description: 'Dropped the Psychology major to join the accelerated Computer Science Program'},
         { year: '2023', description: 'Took an interest in mobile and web development. Completed an internship with Splash Clinical LLC'},
         { year: '2024', description: 'Expect to graduate in Spring with B.S. in Computer Science and M.S. in Software Engineering'}
+      ],
+      accomplishments: [
+        { title:"4+ years",
+          subtitle:"46 credits completed",
+          text:"in computer science course work"},
+        {
+          title:"4 degrees",
+          subtitle:"earned by Spring 2024",
+          text:"Associate (2) Bachelor (1) Master (1)"
+        },
+        {
+          title:"2 NACC Honors",
+          subtitle:"for lacrosse in 2023",
+          text:"Second Team All-Conference and CSC Academic All-District"
+        },
+        {
+          title:"Vice President",
+          subtitle:"of Alpha Chi",
+          text:"the American Collegiate National Honors Society"
+        }
       ]
     };
   },
@@ -255,13 +251,6 @@ export default {
     padding-top: 25px;
     padding-bottom: 0px;
   }
-  .project-col{
-    width: 33.33%;
-  }
-  .a-card-size{
-    max-width: 25%;
-    min-height: 180px;
-  }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
     -webkit-background-clip: text;
@@ -335,36 +324,6 @@ export default {
   .divider-wt{
     padding-top: 25px;
     padding-bottom: 0px;
-  }
-  .project-col{
-    width: 50%;
-  }
-  .timeline-container {
-    position: relative;
-  }
-  .timeline-row::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
-  }
-  .timeline-row v-col {
-    position: relative;
-    z-index: 1;
-  }
-  .timeline-row v-col:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: calc(50% - 10px);
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
   }
   .a-card-size{
     max-width: 25%;

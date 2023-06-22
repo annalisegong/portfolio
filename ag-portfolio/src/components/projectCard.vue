@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; min-width: 100%;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 100%;">
     <div v-for="p in projects" :key="p.title" class="p-card">
       <v-card class="main-card" style="font-family: 'Mukta'">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>

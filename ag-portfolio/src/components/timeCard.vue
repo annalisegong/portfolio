@@ -34,11 +34,12 @@ export default {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 2px 40px;
   }
   .t-card-style{
     min-width: 100px;
     min-height: 40px;
-    margin: 0px 8px 25px 5px;
+    margin: 0 8px 25px 5px;
     box-shadow: none;
     background-color: transparent;
   }
@@ -50,7 +51,7 @@ export default {
   .time-card-size{
     flex-basis: calc(100% / 5);
     max-width: calc(100% / 5);;
-    margin: 0px 8px;
+    margin: 0 8px;
   }
   .year-line{
     display: flex;
@@ -73,7 +74,7 @@ export default {
     line-height: 1.3;
     color: #DBE0E9;
     text-align: left;
-    padding: 2px 2px 0px 15px;
+    padding: 2px 2px 0 15px;
   }
   .timeline-line {
     flex-grow: 1;
@@ -89,6 +90,8 @@ export default {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 2px 40px;
+
   }
   .t-card-style{
     min-width: 100px;
@@ -106,7 +109,7 @@ export default {
   .time-card-size{
     flex-basis: calc(100% / 4);
     max-width: calc(100% / 4);
-    margin: 0px 8px;
+    margin: 0 8px;
   }
   .year-line{
     display: flex;
@@ -129,7 +132,7 @@ export default {
     line-height: 1.3;
     color: #DBE0E9;
     text-align: left;
-    padding: 2px 2px 0px 0px;
+    padding: 2px 2px 0 0;
   }
   .timeline-line {
     flex-grow: 1;
@@ -162,7 +165,7 @@ export default {
   .time-card-size{
     flex-basis: calc(100% / 2);
     max-width: calc(100% / 2);
-    margin: 0px 8px;
+    margin: 0 8px;
   }
   .year-line{
     display: flex;
@@ -185,7 +188,7 @@ export default {
     line-height: 1.3;
     color: #DBE0E9;
     text-align: left;
-    padding: 2px 2px 0px 0px;
+    padding: 2px 2px 0 0;
   }
   .timeline-line {
     flex-grow: 1;
