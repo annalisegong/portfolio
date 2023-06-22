@@ -41,33 +41,7 @@
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
     <p>Currently, I am a software engineering intern for Splash Clinical LLC. Within the next year, I hope to continue improving my programming skills, solidify my career path, and land a full time job after graduation.</p>
     <!--timeline   -->
-    <div id="timeline" class="timeline-container">
-      <v-row justify="space-evenly" class="timeline-row">
-        <v-col class="time-card-size">
-          <TimeCard year="2020"
-                    description="Became a student athlete at Concordia University with my major undecided" />
-        </v-col>
-        <v-col class="time-card-size">
-          <TimeCard year="2021"
-                    description="Declared a double major in Computer Science and Psychology, with a minor in Spanish">
-            <svg width="70" height="2" viewBox="0 0 70 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            </svg>
-          </TimeCard>
-        </v-col>
-        <v-col class="time-card-size">
-          <TimeCard year="2022"
-                    description="Dropped the Psychology major to join the accelerated Computer Science Program" />
-        </v-col>
-        <v-col class="time-card-size">
-          <TimeCard year="2023"
-                    description="Took an interest in mobile and web development. Completed an internship with Splash Clinical LLC" />
-        </v-col>
-        <v-col class="time-card-size">
-          <TimeCard year="2024"
-                    description="Expect to graduate in Spring with B.S. in Computer Science and M.S. in Software Engineering" />
-        </v-col>
-      </v-row>
-    </div><br>
+    <TimeCard :years="years" />
     <v-divider color="#f4f2f5" length="75" thickness="5" style="margin-left: 60px; padding-top: 5px;" class="divider-wt line-gradient"></v-divider>
     <!-- accomplishments     -->
     <div id="accomplishments" style="margin-left: 60px;">
@@ -187,6 +161,13 @@ export default {
           title: 'Frameworks',
           items: ['Vue', 'Laravel', 'Angular', 'Express', 'Node.js', 'Blade Template']
         }
+      ],
+      years: [
+        { year: '2020', description: 'Became a student athlete at Concordia University with my major undecided'},
+        { year: '2021', description: 'Declared a double major in Computer Science and Psychology, with a minor in Spanish'},
+        { year: '2022', description: 'Dropped the Psychology major to join the accelerated Computer Science Program'},
+        { year: '2023', description: 'Took an interest in mobile and web development. Completed an internship with Splash Clinical LLC'},
+        { year: '2024', description: 'Expect to graduate in Spring with B.S. in Computer Science and M.S. in Software Engineering'}
       ]
     };
   },
@@ -277,40 +258,9 @@ export default {
   .project-col{
     width: 33.33%;
   }
-  .timeline-container {
-    position: relative;
-  }
-  .timeline-row::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
-  }
-  .timeline-row v-col {
-    position: relative;
-    z-index: 1;
-  }
-  .timeline-row v-col:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: calc(50% - 10px);
-    height: 2px;
-    background-color: #DBE0E9; /* Adjust the color as desired */
-    z-index: -1;
-  }
   .a-card-size{
     max-width: 25%;
     min-height: 180px;
-  }
-  .time-card-size{
-    max-width: 20%;
-    margin: 0px 8px;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -419,10 +369,6 @@ export default {
   .a-card-size{
     max-width: 25%;
     min-height: 180px;
-  }
-  .time-card-size{
-    max-width: 20%;
-    margin: 0px 8px;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
