@@ -1,8 +1,10 @@
 <template>
-  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+  <div>
+    <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
     <TopNav />
     <MainBody />
     <MyFooter />
+  </div>
 </template>
 
 <script>
