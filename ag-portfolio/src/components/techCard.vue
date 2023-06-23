@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; min-width: 100%;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; min-width: 90%;">
       <v-card v-for="t in technologies" :key="t.title" class="tech-card">
         <v-card-title class="tech-card-title">
           {{t.title}}
@@ -55,7 +55,7 @@
     margin: 5px;
   }
 }
-@media (min-width: 701px) and (max-width: 1280px) {
+@media (min-width: 821px) and (max-width: 1280px) {
   .tech-card {
     height: 350px;
     background-color: #1e1d2b;
@@ -88,7 +88,7 @@
     margin: 5px;
   }
 }
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 375px) and (max-width: 820px) {
   .tech-card {
     max-width: 100%;
     max-height: 300px;

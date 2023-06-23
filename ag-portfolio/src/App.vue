@@ -20,12 +20,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Mukta, Space-Grotesk, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #1e1d2b;
-}
-</style>

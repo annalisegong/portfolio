@@ -2,7 +2,7 @@
 <!--  <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">-->
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
-  <v-container display:flex style="font-family: Mukta, Space-Grotesk, sans-serif; align-items: center">
+  <v-container display:flex class="section-size">
     <div style="display: grid; grid-template-columns: 1fr auto;">
       <div>
         <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
@@ -10,13 +10,13 @@
         <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
         <v-btn rounded href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
       </div>
-      <div style="text-align: right;">
+      <div class="lottie-container" style="text-align: right;">
         <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_CR23KK4W5R.json"  background="transparent"  speed="1"  class="animation"  loop  autoplay></lottie-player>
       </div>
     </div>
   </v-container>
   <!--  projects section-->
-  <v-container id="Projects" style="font-family: 'Mukta'">
+  <v-container id="Projects" class="section-size">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
@@ -24,7 +24,7 @@
       </v-row>
     </v-container>
   <!-- tech section-->
-  <v-container id="Technologies" style="font-family: 'Mukta'">
+  <v-container id="Technologies" class="section-size">
       <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="heading-gradient">Technologies</h2>
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
@@ -33,7 +33,7 @@
       </v-row>
     </v-container>
   <!--  about section-->
-  <v-container id="About" style="font-family: 'Mukta'">
+  <v-container id="About" class="section-size">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">About</h2>
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
@@ -51,7 +51,7 @@
     </div>
   </v-container>
   <!--  resume section-->
-  <v-container id="Resume" style="padding-bottom: 0; font-family: 'Mukta'">
+  <v-container id="Resume" class="section-size">
     <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />
@@ -241,6 +241,12 @@ export default {
     text-transform: none;
     font-size: 15pt
   }
+  .section-size{
+    font-family: Mukta, Space-Grotesk, sans-serif;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
   .animation{
     width: 400px;
     height: 300px;
@@ -263,13 +269,13 @@ export default {
 /* screen size bigger than iphone less than laptop */
 @media (min-width: 701px) and (max-width: 1280px){
   h1{
-    font-size: 28pt;
+    font-size: 25pt;
     font-weight: 800;
     color: #DBE0E9;
-    margin-left: 50px;
+    margin-left: 35px;
   }
   h2{
-    font-size: 24pt;
+    font-size: 22pt;
     font-weight: 700;
     color: #DBE0E9;
   }
@@ -315,6 +321,12 @@ export default {
     text-transform: none;
     font-size: 15pt
   }
+  .section-size{
+    font-family: Mukta, Space-Grotesk, sans-serif;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
   .animation{
     width: 300px;
     height: 200px;
@@ -340,7 +352,7 @@ export default {
     font-size: 20pt;
     font-weight: 700;
     color: #DBE0E9;
-    margin-left: 50px;
+    margin-left: 30px;
   }
   h2{
     font-size: 24pt;
@@ -367,7 +379,7 @@ export default {
     font-weight: 400;
     line-height: 1.75;
     color: #7b838f;
-    margin: 3px 80px;
+    margin: 3px 30px;
     padding: 5px 10px 20px 10px;
   }
   .intro-p{
@@ -376,12 +388,12 @@ export default {
     font-weight: 500;
     color: #7b838f;
     min-width: 75%;
-    margin: 0 80px;
+    margin: 0 50px;
     padding: 5px 10px
   }
   .intro-btn{
     margin-top: 14px;
-    margin-left: 50px;
+    margin-left: 30px;
     min-height: 45px;
     min-width: 150px;
     background: linear-gradient(to right, #923fb8, #4bbedb);
@@ -389,6 +401,17 @@ export default {
     font-weight: 400;
     text-transform: none;
     font-size: 13pt
+  }
+  .section-size{
+    font-family: Mukta, Space-Grotesk, sans-serif;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  /* i'm trying to move the animation to its own line when the width is less than 701px*/
+  .lottie-container{
+    display: block;
+    flex-basis: 100%;
   }
   .animation{
     width: 250px;

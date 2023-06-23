@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 100%;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 90%;">
     <div v-for="p in projects" :key="p.title" class="p-card">
       <v-card class="main-card" style="font-family: Mukta, Space-Grotesk, sans-serif">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>
@@ -73,7 +73,7 @@ export default {
     max-height: 250px;
   }
   .p-card-text-height{
-    min-height: 275px;
+    min-height: 300px;
   }
   .p-card-text {
     line-height: 1.75;
@@ -137,7 +137,7 @@ export default {
     max-height: 200px;
   }
   .p-card-text-height{
-    min-height: 250px;
+    min-height: 300px;
   }
   .p-card-text{
     line-height: 1.5;
