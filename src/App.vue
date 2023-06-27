@@ -10,7 +10,7 @@
 <script>
 import TopNav from './components/topNav.vue'
 import MainBody from "@/components/mainBody.vue"
-import MyFooter from "@/components/footer.vue";
+import MyFooter from "@/components/footer.vue"
 export default {
   name: 'App',
   components: {

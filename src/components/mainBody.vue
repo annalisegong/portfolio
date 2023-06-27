@@ -17,7 +17,7 @@
   </v-container>
   <!--  projects section-->
   <v-container id="Projects" class="section-size">
-      <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
+      <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
       <v-row justify="space-evenly" style="padding-top: 40px">
           <ProjectCard :projects="projects"  />
@@ -25,8 +25,8 @@
     </v-container>
   <!-- tech section-->
   <v-container id="Technologies" class="section-size">
-      <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
-      <h2 class="heading-gradient">Technologies</h2>
+      <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
+      <h2 class="text-gradient">Technologies</h2>
       <p>I have worked with a range of technologies in the mobile, web, and game development world. The frameworks and programs I have used apply to both backend and front end development.</p>
       <v-row>
           <tech-card :technologies="technologies" />
@@ -34,7 +34,7 @@
     </v-container>
   <!--  about section-->
   <v-container id="About" class="section-size">
-    <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
+    <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">About</h2>
     <p>I came into college with my major undecided, since I couldn't choose between computer science and health professions. I soon realized that I didn't have to choose between the two, so I double majored in my two areas of interest: computer science and psychology. Eventually, my professor suggested I drop my psych major to instead pursue a Master's Degree in Computer Science via CUW's accelerated program, thus allowing me to graduate in a total of four years with my Bachelor's and Master's Degree. Since joining this program, I've become interested in pursuing a career in mobile, web, or game development.</p>
     <p>Currently, I am a software engineering intern for Splash Clinical LLC. Within the next year, I hope to continue improving my programming skills, solidify my career path, and land a full time job after graduation.</p>
@@ -42,7 +42,7 @@
     <TimeCard :years="years" />
     <v-divider color="#f4f2f5" length="75" thickness="5" style="margin-left: 60px; padding-top: 5px;" class="divider-wt line-gradient"></v-divider>
     <!-- accomplishments     -->
-    <div id="accomplishments" style="margin-left: 60px;">
+    <div id="accomplishments" class="accomplishments">
       <h3 class="text-gradient" style="padding-bottom: 20px;">Personal Accomplishments</h3>
       <v-row justify="center">
 <!--        <v-col cols="12" sm="6" md="4" lg="3" class="a-card-size">-->
@@ -52,18 +52,18 @@
   </v-container>
   <!--  resume section-->
   <v-container id="Resume" class="section-size">
-    <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient"></v-divider>
+    <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
     <h2 class="text-gradient">Resume</h2>
       <ResumeCard />
     <br>
     <v-divider color="#f4f2f5" thickness="2" style="padding-top: 5px" class="divider-wt line-gradient"></v-divider>
     <div style="display: flex; padding-bottom: 20px;">
         <div style="flex-basis: 25%; padding: 15px 40px;">
-          <h5 style="padding-bottom: 8px">call</h5>
+          <h5 style="padding-bottom: 8px">Call</h5>
           <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300; white-space: nowrap; min-width: 90%" href="tel:602-625-2342">602-615-2342</a>
         </div>
         <div style="flex-basis: 25%; padding: 15px 40px;">
-          <h5 style="padding-bottom: 8px">email</h5>
+          <h5 style="padding-bottom: 8px">Email</h5>
           <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300;" href="mailto:gonganna01@aol.com">gonganna01@aol.com</a>
         </div>
     </div>
@@ -78,6 +78,7 @@ import ResumeCard from "@/components/resumeCard.vue";
 import TimeCard from "@/components/timeCard.vue";
 import VueScrollTo from 'vue-scrollto';
 import 'animate.css';
+
 
 export default {
   name: 'MainBody',
@@ -146,21 +147,21 @@ export default {
       accomplishments: [
         { title:"4+ years",
           subtitle:"46 credits completed",
-          text:"in computer science course work"},
+          text:"In computer science course work"},
         {
           title:"4 degrees",
-          subtitle:"earned by Spring 2024",
+          subtitle:"Earned by Spring 2024",
           text:"Associate (2) Bachelor (1) Master (1)"
         },
         {
           title:"2 NACC Honors",
-          subtitle:"for lacrosse in 2023",
+          subtitle:"For lacrosse in 2023",
           text:"Second Team All-Conference and CSC Academic All-District"
         },
         {
           title:"Vice President",
           subtitle:"of Alpha Chi",
-          text:"the American Collegiate National Honors Society"
+          text:"The American Collegiate National Honors Society"
         }
       ]
     };
@@ -170,6 +171,17 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
+  },
+  computed: {
+    getDividerLength() {
+      if (typeof window !== 'undefined') {
+        const screenWidth = window.innerWidth;
+        if (screenWidth >= 375 && screenWidth <= 800) {
+          return 500; // Set the length to 500 when within the desired range
+        }
+      }
+      return 75; // Default length for other screen widths
+    },
   },
   // allows slow scrolling on menu click
   methods: {
@@ -222,6 +234,9 @@ export default {
     margin: 3px 80px;
     padding: 5px 10px 20px 10px;
   }
+  #accomplishments{
+    margin-left: 60px;
+  }
   .intro-p{
     font-size: 15pt;
     line-height: 1.8;
@@ -254,6 +269,7 @@ export default {
   .divider-wt{
     padding-top: 25px;
     padding-bottom: 0;
+
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -301,6 +317,9 @@ export default {
     color: #7b838f;
     margin: 3px 80px;
     padding: 5px 10px 20px 10px;
+  }
+  #accomplishments{
+    margin-left: 60px;
   }
   .intro-p{
     font-size: 12pt;
@@ -357,6 +376,9 @@ export default {
   h2{
     font-size: 24pt;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #DBE0E9;
   }
   h3 {
@@ -381,6 +403,9 @@ export default {
     color: #7b838f;
     margin: 3px 30px;
     padding: 5px 10px 20px 10px;
+  }
+  #accomplishments{
+    margin-left: 20px;
   }
   .intro-p{
     font-size: 12pt;
@@ -420,6 +445,9 @@ export default {
   .divider-wt{
     padding-top: 25px;
     padding-bottom: 0;
+  }
+  v-divider {
+    length: 500px;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);

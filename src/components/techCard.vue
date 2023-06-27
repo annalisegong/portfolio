@@ -40,6 +40,9 @@
     font-weight: 300;
     flex-basis: 50%;
     color: #DBE0E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .tech-card-title{
     color: #69b0c2;
@@ -57,7 +60,7 @@
 }
 @media (min-width: 821px) and (max-width: 1280px) {
   .tech-card {
-    height: 350px;
+    max-height: 500px;
     background-color: #1e1d2b;
     box-shadow: 0 0 8px #4bbedb;
     color: #DBE0E9;
@@ -69,8 +72,12 @@
     line-height: 1.75;
     font-size: 12pt;
     font-weight: 300;
-    flex-basis: 50%;
+    flex-basis: calc(50% - 4px);
     color: #DBE0E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .tech-card-title {
@@ -85,6 +92,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2px;
     margin: 5px;
   }
 }
@@ -105,6 +116,9 @@
     font-weight: 300;
     flex-basis: 50%;
     color: #DBE0E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .tech-card-title {
