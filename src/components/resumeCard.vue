@@ -2,7 +2,7 @@
   <div style="display:flex; justify-content: center; align-items: center; font-family: Mukta, Space-Grotesk, sans-serif">
     <v-card class="resume-card">
 <!--this line is breaking my npm build-->
-<!--      <v-img src="/public/assets/resume.png" class="img-size"/>-->
+      <v-img src="/src/assets/resume.png" class="img-size"/>
       <div style="display: flex;justify-content: center; align-items: center">
         <v-divider color="#f4f2f5" length="80" thickness="5" style=" padding-bottom: 5px;" class="divider-wt line-gradient"></v-divider>
       </div>
@@ -12,7 +12,7 @@
                width="100"
           class="r-card-btn"
           variant="text"
-          href="public/assets/resume.png"
+          href="/src/assets/resume.png"
           target="_blank"
         >view</v-btn>
       </v-card-actions>

@@ -114,7 +114,7 @@ export default {
         },
         {
           title: 'Referral Site Transfer',
-          url: 'src/assets/splashLogo.png',
+          url: '/src/assets/splashLogo.png',
           items: ['Linux', 'Nginx', 'MySQL', 'PHP'],
           text: 'Details coming soon ...',
           code: '#',
