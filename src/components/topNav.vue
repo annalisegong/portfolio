@@ -191,8 +191,8 @@ export default {
     justify-content: center;
     align-items: center;
     color: #DBE0E9;
-    width: 75%;
-    padding: 20px 0 30px 0;
+    width: 95%;
+    padding: 20px 0 10px 0;
   }
   .menu-item {
     flex: 1;
