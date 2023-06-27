@@ -8,7 +8,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://annalisegong.netlify.app/",
+  // base: "https://annalisegong.netlify.app/",
   // publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
   plugins: [
     vue({
