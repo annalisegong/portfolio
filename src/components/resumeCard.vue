@@ -77,14 +77,12 @@ export default {
 }
 @media (min-width: 375px) and (max-width: 700px) {
   .resume-card{
-    max-width: 80%;
-    min-height: 75%;
     background-color: #1e1d2b;
     box-shadow: 0 0 8px #3b49a3;
     padding-bottom: 10px;
   }
   .img-size{
-    margin:15px 40px 10px 40px;
+    margin:10px;
     align-items: center;
     min-height: 450px;
     max-height: 650px;

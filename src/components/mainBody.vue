@@ -3,15 +3,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap">
   <!--  intro section-->
   <v-container display:flex class="section-size">
-    <div style="display: grid; grid-template-columns: 1fr auto;">
-      <div>
-        <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
-        <h1 class="text-gradient">Welcome to my Portfolio</h1>
-        <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
-        <v-btn rounded href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
-      </div>
-      <div class="lottie-container" style="text-align: right;">
+    <div class="container">
+      <div class="text-container">
+        <div>
+          <h1 class="text-gradient">Hi, I am Anna Gong.</h1>
+          <h1 class="text-gradient">Welcome to my Portfolio</h1>
+          <p class="intro-p">Aspiring mobile and web developer graduating in Spring 2024 with a Bachelor's and Master's Degree from Concordia University Wisconsin.</p>
+          <v-btn rounded href="#About" v-scroll-to="{el:'#About', duration:1000}" class="intro-btn">Learn More</v-btn>
+        </div>
+        <div class="lottie-container">
         <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_CR23KK4W5R.json"  background="transparent"  speed="1"  class="animation"  loop  autoplay></lottie-player>
+        </div>
       </div>
     </div>
   </v-container>
@@ -19,8 +21,8 @@
   <v-container id="Projects" class="section-size">
       <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
-      <v-row justify="space-evenly" style="padding-top: 40px">
-          <ProjectCard :projects="projects"  />
+      <v-row justify="space-evenly">
+          <ProjectCard :projects="projects" />
       </v-row>
     </v-container>
   <!-- tech section-->
@@ -176,9 +178,12 @@ export default {
     getDividerLength() {
       if (typeof window !== 'undefined') {
         const screenWidth = window.innerWidth;
-        if (screenWidth >= 375 && screenWidth <= 800) {
+        if (screenWidth >= 375 && screenWidth <= 700) {
           return 500; // Set the length to 500 when within the desired range
         }
+        // else if(screenWidth >= 801 && screenWidth <= 1280){
+        //   return 150;
+        // }
       }
       return 75; // Default length for other screen widths
     },
@@ -209,6 +214,7 @@ export default {
   h2{
     font-size: 36pt;
     font-weight: 700;
+    padding-bottom: 20px;
     color: #DBE0E9;
   }
   h3 {
@@ -237,17 +243,33 @@ export default {
   #accomplishments{
     margin-left: 60px;
   }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .lottie-container{
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   .intro-p{
     font-size: 15pt;
     line-height: 1.8;
     font-weight: 500;
     color: #7b838f;
     max-width: 75%;
-    margin: 0 120px;
+    margin: 0 100px;
     padding: 5px 20px
   }
   .intro-btn{
     margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 50px;
     min-height: 60px;
     min-width: 200px;
@@ -269,7 +291,6 @@ export default {
   .divider-wt{
     padding-top: 25px;
     padding-bottom: 0;
-
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
@@ -288,16 +309,18 @@ export default {
     font-size: 25pt;
     font-weight: 800;
     color: #DBE0E9;
-    margin-left: 35px;
+    margin-left: 25px;
   }
   h2{
     font-size: 22pt;
     font-weight: 700;
+    padding-bottom: 20px;
     color: #DBE0E9;
   }
   h3 {
     font-size: 20pt;
     font-weight: 600;
+    padding-bottom: 20px;
     color: #DBE0E9;
   }
   h4 {
@@ -318,6 +341,21 @@ export default {
     margin: 3px 80px;
     padding: 5px 10px 20px 10px;
   }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .lottie-container{
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   #accomplishments{
     margin-left: 60px;
   }
@@ -327,7 +365,7 @@ export default {
     font-weight: 500;
     color: #7b838f;
     min-width: 75%;
-    margin: 0 100px;
+    margin: 0 70px;
     padding: 5px 10px
   }
   .intro-btn{
@@ -355,6 +393,7 @@ export default {
     padding-bottom: 0;
   }
   .text-gradient{
+    display: inline-block;
     background: linear-gradient(to right, #DBE0E9, #48444f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -371,11 +410,14 @@ export default {
     font-size: 20pt;
     font-weight: 700;
     color: #DBE0E9;
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   h2{
     font-size: 24pt;
     font-weight: 700;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,6 +446,17 @@ export default {
     margin: 3px 30px;
     padding: 5px 10px 20px 10px;
   }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   #accomplishments{
     margin-left: 20px;
   }
@@ -412,15 +465,19 @@ export default {
     line-height: 1.8;
     font-weight: 500;
     color: #7b838f;
-    min-width: 75%;
-    margin: 0 50px;
-    padding: 5px 10px
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+    padding: 10px;
   }
   .intro-btn{
     margin-top: 14px;
-    margin-left: 30px;
+    margin-left: 100px;
     min-height: 45px;
     min-width: 150px;
+    margin-bottom: 20px;
     background: linear-gradient(to right, #923fb8, #4bbedb);
     color: #f0f0f0;
     font-weight: 400;
@@ -432,11 +489,6 @@ export default {
     width: 90%;
     justify-content: center;
     align-items: center;
-  }
-  /* i'm trying to move the animation to its own line when the width is less than 701px*/
-  .lottie-container{
-    display: block;
-    flex-basis: 100%;
   }
   .animation{
     width: 250px;
@@ -450,7 +502,7 @@ export default {
     length: 500px;
   }
   .text-gradient{
-    background: linear-gradient(to right, #DBE0E9, #48444f);
+    background: linear-gradient(to right, #DBE0E9,  #c9cdd6, #48444f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
