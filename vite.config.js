@@ -10,6 +10,13 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   // base: "https://annalisegong.netlify.app/",
   // publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
+  },
   plugins: [
     vue({
       template: { transformAssetUrls }
