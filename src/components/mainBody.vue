@@ -96,7 +96,7 @@ export default {
       projects: [
         {
           title: 'Tic Tac Toe App',
-          url: 'public/assets/tictactoe.png',
+          url: '/assets/tictactoe.png',
           items: ['Unity', 'Visual Studio Code', 'Procreate'],
           text: 'Tic Tac Toe is a simple web application that I worked on as the main programmer among a team of three other novice programmers. This project was completed within a four-month time period and was developed on the Unity Game Engine. It is currently available for free download, and consists of a computerized opponent for three levels of difficulty. This project has led me to explore careers involving mobile app or game development.',
           code: 'https://github.com/annalisegong/TicTacToe',
@@ -105,16 +105,16 @@ export default {
         },
         {
           title: 'Circle B Redesign',
-          url: 'public/assets/circleBLogo.png',
+          url: '/assets/circleBLogo.png',
           items: ['HTML', 'CSS', 'JavaScript', 'XAMPP'],
           text: 'Circle B Redesign was inspired by the final project for Advanced Database and Web Development. The current website for this local bowling alley appears a bit outdated, so I created a local project using front-end web development tools to implement a dynamic and more modern-looking UI. This project, in particular, piqued my interest in full-stack development.',
           code: 'https://github.com/annalisegong/CircleB',
           bName: 'video',
-          download: 'public/assets/CSC460FinalProject.mp4'
+          download: '/assets/CSC460FinalProject.mp4'
         },
         {
           title: 'Referral Site Transfer',
-          url: 'public/assets/splashLogo.png',
+          url: '/assets/splashLogo.png',
           items: ['Linux', 'Nginx', 'MySQL', 'PHP'],
           text: 'Details coming soon ...',
           code: '#',
