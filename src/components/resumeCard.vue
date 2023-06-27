@@ -1,7 +1,7 @@
 <template>
   <div style="display:flex; justify-content: center; align-items: center; font-family: Mukta, Space-Grotesk, sans-serif">
     <v-card class="resume-card">
-      <v-img src="src/assets/resume.png" class="img-size"/>
+<!--      <v-img src="src/assets/resume.png" class="img-size"/>-->
       <div style="display: flex;justify-content: center; align-items: center">
         <v-divider color="#f4f2f5" length="80" thickness="5" style=" padding-bottom: 5px;" class="divider-wt line-gradient"></v-divider>
       </div>
