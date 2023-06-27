@@ -448,7 +448,7 @@ export default {
     font-weight: 400;
     line-height: 1.75;
     color: #7b838f;
-    margin: 3px 30px;
+    margin: 3px 0;
     padding: 5px 10px 20px 10px;
   }
   .container{
@@ -491,7 +491,7 @@ export default {
   }
   .section-size{
     font-family: Mukta, Space-Grotesk, sans-serif;
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }

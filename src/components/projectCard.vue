@@ -204,7 +204,7 @@ export default {
   .p-card-text{
     line-height: 1.5;
     font-weight: 300;
-    margin: 0 20px;
+    margin: 0 5px;
     color: #DBE0E9;
     font-size: 12pt;
   }
