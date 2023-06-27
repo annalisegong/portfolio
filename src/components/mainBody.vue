@@ -42,7 +42,7 @@
     <p>Currently, I am a software engineering intern for Splash Clinical LLC. Within the next year, I hope to continue improving my programming skills, solidify my career path, and land a full time job after graduation.</p>
     <!--timeline   -->
     <TimeCard :years="years" />
-    <v-divider color="#f4f2f5" length="75" thickness="5" style="margin-left: 60px; padding-top: 5px;" class="divider-wt line-gradient"></v-divider>
+    <v-divider color="#f4f2f5" length="75" thickness="5" class="divider-wt line-gradient divider-about"></v-divider>
     <!-- accomplishments     -->
     <div id="accomplishments" class="accomplishments">
       <h3 class="text-gradient" style="padding-bottom: 20px;">Personal Accomplishments</h3>
@@ -289,6 +289,9 @@ export default {
     padding-top: 25px;
     padding-bottom: 0;
   }
+  .divider-about{
+    margin-left: 20px; padding-top: 5px;
+  }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9, #48444f);
     -webkit-background-clip: text;
@@ -392,6 +395,9 @@ export default {
   .divider-wt{
     padding-top: 25px;
     padding-bottom: 0;
+  }
+  .divider-about{
+    margin-left: 20px; padding-top: 5px;
   }
   .text-gradient{
     display: inline-block;
@@ -505,6 +511,9 @@ export default {
   }
   v-divider {
     length: 500px;
+  }
+  .divider-about{
+    margin-left: 20px; padding: 5px;
   }
   .text-gradient{
     background: linear-gradient(to right, #DBE0E9,  #c9cdd6, #48444f);
