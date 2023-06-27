@@ -8,8 +8,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://annalisegong.github.io/portfolio/",
-  publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
+  base: "https://annalisegong.netlify.app/",
+  // publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
   plugins: [
     vue({
       template: { transformAssetUrls }

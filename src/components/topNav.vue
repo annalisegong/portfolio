@@ -20,9 +20,7 @@
         </v-col>
 <!-- add instagram link href-->
         <v-col class="menu-item" style="display: flex; justify-content: center; align-items: center">
-          <v-btn href="https://github.com/annalisegong?tab=repositories"
-                 target="_blank"
-                 class="btn-style">
+          <v-btn href="https://github.com/annalisegong?tab=repositories" target="_blank" class="btn-style">
             <v-icon>mdi-github</v-icon>
           </v-btn>
           <v-btn href="https://linkedin.com/in/annalise-gong/" target="_blank" class="btn-style">
