@@ -60,11 +60,11 @@
     <br>
     <v-divider color="#f4f2f5" thickness="2" style="padding-top: 5px" class="divider-wt line-gradient"></v-divider>
     <div style="display: flex; padding-bottom: 20px;">
-        <div style="flex-basis: 25%; padding: 15px 40px;">
+        <div class="footer-div">
           <h5 style="padding-bottom: 8px">Call</h5>
           <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300; white-space: nowrap; min-width: 90%" href="tel:602-625-2342">602-615-2342</a>
         </div>
-        <div style="flex-basis: 25%; padding: 15px 40px;">
+        <div class="footer-div">
           <h5 style="padding-bottom: 8px">Email</h5>
           <a style="text-decoration: none; color: #DBE0E9; font-size: 12pt; font-weight: 300;" href="mailto:gonganna01@aol.com">gonganna01@aol.com</a>
         </div>
@@ -181,9 +181,6 @@ export default {
         if (screenWidth >= 375 && screenWidth <= 700) {
           return 500; // Set the length to 500 when within the desired range
         }
-        // else if(screenWidth >= 801 && screenWidth <= 1280){
-        //   return 150;
-        // }
       }
       return 75; // Default length for other screen widths
     },
@@ -302,6 +299,10 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .footer-div{
+    flex-basis: 25%;
+    padding: 15px 40px;
+  }
 }
 /* screen size bigger than iphone less than laptop */
 @media (min-width: 701px) and (max-width: 1280px){
@@ -402,6 +403,10 @@ export default {
     background: linear-gradient(to right, #923fb8, #4bbedb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .footer-div{
+    flex-basis: 25%;
+    padding: 15px 40px;
   }
 }
 /* iphone screen size */
@@ -510,6 +515,10 @@ export default {
     background: linear-gradient(to right, #923fb8, #4bbedb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .footer-div{
+    flex-basis: 25%;
+    padding: 15px;
   }
 }
 </style>
