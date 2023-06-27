@@ -110,7 +110,7 @@ export default {
           text: 'Circle B Redesign was inspired by the final project for Advanced Database and Web Development. The current website for this local bowling alley appears a bit outdated, so I created a local project using front-end web development tools to implement a dynamic and more modern-looking UI. This project, in particular, piqued my interest in full-stack development.',
           code: 'https://github.com/annalisegong/CircleB',
           bName: 'video',
-          download: '/src/assets/CSC460FinalProject.mp4'
+          download: '/assets/CSC460FinalProject.mp4'
         },
         {
           title: 'Referral Site Transfer',
