@@ -62,14 +62,6 @@ export default {
     font-size: 16pt;
     color: #9e9e9e;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
   a {
     font-size: 18pt;
     color: #DBE0E9;
@@ -114,14 +106,6 @@ export default {
     font-size: 14pt;
     color: #9e9e9e;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
   a {
     font-size: 18pt;
     color: #DBE0E9;
@@ -165,33 +149,25 @@ export default {
     font-size: 11pt;
     color: #9e9e9e;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0;
-  }
   a {
     font-size: 11pt;
     color: #DBE0E9;
     text-decoration: none;
   }
   v-row {
-    max-width: 80%;
+    min-width: 100%;
     min-height: 100%;
     align-items: center;
   }
   .row-col{
-    display: flex; justify-content: center; align-items: center; padding: 3px; flex:1;
+    display: flex; justify-content: center; align-items: center; padding: 5px; flex:1;
   }
   .menu-background{
     display: flex;
     justify-content: center;
     align-items: center;
     color: #DBE0E9;
-    width: 95%;
+    width: 100%;
     padding: 20px 0 10px 0;
   }
   .menu-item {
