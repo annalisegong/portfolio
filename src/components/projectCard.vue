@@ -73,7 +73,7 @@ export default {
     max-height: 250px;
   }
   .p-card-text-height{
-    min-height: 400px;
+    min-height: 340px;
   }
   .p-card-text {
     line-height: 1.75;
@@ -137,7 +137,7 @@ export default {
     max-height: 200px;
   }
   .p-card-text-height{
-    min-height: 300px;
+    min-height: 280px;
   }
   .p-card-text{
     line-height: 1.5;
