@@ -16,6 +16,10 @@ const routes = [
       },
     ],
   },
+  // {
+  //   path: '/privacy-disclaimer',
+  //   component: () => import('@/splashCode.html')
+  // }
 ]
 
 const router = createRouter({
