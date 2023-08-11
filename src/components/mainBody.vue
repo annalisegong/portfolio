@@ -120,7 +120,7 @@ export default {
           url: '/assets/splashLogo.png',
           items: ['Linux', 'Nginx', 'MySQL', 'PHP', 'Vue'],
           text: 'This internship project increased my familiarity with MVC architecture and full stack development. I augmented Splash Clinical\'s internal Patient Recruitment Portal by programming a referral site transfer capabilities that would allow managers to transfer patients to a different study site via the database, once approved by super managers. Enabling this feature alleviated a portion of the development team\'s workload as well as increased the company\'s productivity and efficiency in patient recruitment.',
-          code: '#',
+          code: '/src/splashCode.html',
           bName: 'demo',
           download: 'https://miro.com/app/board/uXjVMx4bWW8=/?moveToWidget=3458764560741361867&cot=14'
         }
