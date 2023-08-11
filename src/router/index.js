@@ -15,11 +15,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
       },
     ],
-  },
-  // {
-  //   path: '/privacy-disclaimer',
-  //   component: () => import('@/splashCode.html')
-  // }
+  }
 ]
 
 const router = createRouter({
