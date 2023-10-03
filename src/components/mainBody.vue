@@ -129,11 +129,11 @@ export default {
       technologies: [
         {
           title: 'Programming Languages',
-          items: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python']
+          items: ['C#', 'C++', 'PHP','SQL', 'HTML', 'CSS', 'JavaScript', 'Python', 'Swift']
         },
         {
           title: 'Programs / Systems',
-          items: ['MacOS', 'Windows', 'Linux', 'MongoDB', 'Github', 'Bitbucket', 'XAMPP', 'VirtualBox', 'Postman', 'PHP Storm', 'Source Tree', 'Unity Game Engine', 'Visual Studio Code', 'MySQL Workbench']
+          items: ['MacOS', 'Windows', 'Linux', 'MongoDB', 'Github', 'Bitbucket', 'XCode', 'XAMPP', 'VirtualBox', 'Postman', 'PHP Storm', 'Source Tree', 'Unity Game Engine', 'Visual Studio Code', 'MySQL Workbench']
         },
         {
           title: 'Frameworks',
