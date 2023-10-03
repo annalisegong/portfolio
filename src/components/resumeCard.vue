@@ -12,7 +12,7 @@
                width="100"
           class="r-card-btn"
           variant="text"
-          href="/assets/resume.png"
+          href="/assets/A Gong resume.png"
           target="_blank"
         >view</v-btn>
       </v-card-actions>
