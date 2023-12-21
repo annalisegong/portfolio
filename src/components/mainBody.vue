@@ -123,7 +123,7 @@ export default {
           code: '/splashCode.html',
           // code: '/privacy-disclaimer',
           bName: 'demo',
-          download: 'https://miro.com/app/board/uXjVMx4bWW8=/?moveToWidget=3458764560741361867&cot=14'
+          download: 'https://www.canva.com/design/DAF2OA_9NtI/oevz5YzbOH2Vvdl3SXHqRg/edit?utm_content=DAF2OA_9NtI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
         }
       ],
       technologies: [
