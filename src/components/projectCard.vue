@@ -57,7 +57,7 @@ export default {
     color: #DBE0E9;
   }
   .p-card {
-    flex-basis: calc(25% - 20px);
+    flex-basis: calc(25% - 10px);
     margin: 15px;
   }
   .p-card-title {
@@ -65,6 +65,7 @@ export default {
     text-align: center;
     font-size: 22pt;
     font-weight: 600;
+    min-height: 280px;
     white-space: break-spaces;
     word-break: break-word;
   }

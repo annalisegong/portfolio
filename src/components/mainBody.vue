@@ -129,7 +129,7 @@ export default {
           title: 'Hunger Helper App', 
           url: '/assets/Hunger_Helper_Logo.png', 
           items: ['Xcode', 'Swift', 'SwiftUI', 'Google Places API'], 
-          text: 'Hunger Helper is an iOS mobile application that I created for my Senior Capstone Project. The purpose of this app is to help indecisive users figure out where they should eat. Hunger Helper is both straight-forward aesthetic, to enhance the overall user experience. Once the user determines the starting location to search from, this app utilizes the Google Places to generate several restaurant suggestions that align with the user-indicated preferences such as distance from the location, price range, and cuisine type.',
+          text: 'Hunger Helper is an iOS mobile application that I created for my Senior Capstone Project. The purpose of this app is to help indecisive users figure out where they should eat. Hunger Helper is both straight-forward aesthetic to enhance the overall user experience. Once the user determines the starting location to search from, this app utilizes the Google Places API to generate several restaurant suggestions that align with the user-indicated preferences such as distance from the location, price range, and cuisine type.',
           code: 'https://github.com/annalisegong/Hunger-Helper',
           bName: 'demo',
           download: 'https://www.canva.com/design/DAF2Pt-V4rY/XpnluZdbav91H7gq_neR9A/edit?utm_content=DAF2Pt-V4rY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
