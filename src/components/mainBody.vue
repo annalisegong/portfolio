@@ -288,7 +288,6 @@ export default {
   .section-size{
     font-family: Mukta, Space-Grotesk, sans-serif;
     width: 100%;
-    flex-wrap: false;
     justify-content: center;
     align-items: center;
   }

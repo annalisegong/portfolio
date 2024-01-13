@@ -54,7 +54,7 @@ export default {
     justify-content: center; 
     align-items: 
     flex-start; 
-    min-width: 100%;
+    min-width: 90%;
   },
   .main-card {
     min-width: 100%;
@@ -125,7 +125,7 @@ export default {
     justify-content: center; 
     align-items: 
     flex-start; 
-    min-width: 100%;
+    min-width: 90%;
   },
   .main-card {
     min-width: 100%;
