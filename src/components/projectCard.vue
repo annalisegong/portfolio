@@ -58,7 +58,7 @@ export default {
   }
   .p-card {
     flex-basis: calc(47% - 20px);
-    margin: 10px;
+    margin: 15px;
   }
   .p-card-title {
     color: #DBE0E9;
@@ -71,10 +71,10 @@ export default {
   }
   .p-card-img{
     margin: 10px;
-    max-height: 250px;
+    max-height: 200px;
   }
   .p-card-text-height{
-    min-height: 120px;
+    min-height: 130px;
   }
   .p-card-text {
     line-height: 1.75;
