@@ -65,7 +65,7 @@ export default {
     text-align: center;
     font-size: 22pt;
     font-weight: 600;
-    min-height: 280px;
+    min-height: 80px;
     white-space: break-spaces;
     word-break: break-word;
   }
