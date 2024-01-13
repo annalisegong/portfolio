@@ -21,7 +21,7 @@
   <v-container id="Projects" class="section-size">
       <v-divider color="#f4f2f5" :length="getDividerLength" thickness="5" class="divider-wt line-gradient"></v-divider>
       <h2 class="text-gradient">Projects</h2>
-      <v-row justify="space-evenly">
+      <v-row justify="space-evenly" flex-wrap="false">
           <ProjectCard :projects="projects" />
       </v-row>
     </v-container>
