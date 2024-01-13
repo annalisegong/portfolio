@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; min-width: 90%;">
+  <div style="display: flex; justify-content: center; align-items: flex-start; min-width: 90%;">
     <div v-for="p in projects" :key="p.title" class="p-card">
       <v-card class="main-card" style="font-family: Mukta, Space-Grotesk, sans-serif">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>
@@ -57,7 +57,7 @@ export default {
     color: #DBE0E9;
   }
   .p-card {
-    flex-basis: calc(25% - 20px);
+    flex-basis: calc(20% - 20px);
     margin: 15px;
   }
   .p-card-title {
@@ -94,7 +94,6 @@ export default {
     font-weight: 400;
     text-transform: none;
   }
-
   .stack-container {
     display: flex;
     flex-direction: column;
