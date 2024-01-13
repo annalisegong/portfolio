@@ -57,8 +57,8 @@ export default {
     color: #DBE0E9;
   }
   .p-card {
-    flex-basis: calc(20% - 20px);
-    margin: 15px;
+    flex-basis: calc(25% - 20px);
+    margin: 25px;
   }
   .p-card-title {
     color: #DBE0E9;
