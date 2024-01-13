@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; justify-content: center; align-items: flex-start; min-width: 90%;">
+  <div class="div_style">
     <div v-for="p in projects" :key="p.title" class="p-card">
       <v-card class="main-card" style="font-family: Mukta, Space-Grotesk, sans-serif">
         <v-card-title class="p-card-title">{{ p.title }}</v-card-title>
@@ -49,6 +49,13 @@ export default {
 
 <style scoped>
 @media (min-width: 1281px) and (max-width: 3000px) {
+  .div_style {
+    display: flex;
+    justify-content: center; 
+    align-items: 
+    flex-start; 
+    min-width: 100%;
+  },
   .main-card {
     min-width: 100%;
     min-height: 100%;
@@ -83,7 +90,6 @@ export default {
     color: #DBE0E9;
     font-size: 13pt;
   }
-
   .p-card-btn {
     background: linear-gradient(to right, #4a2a6d, #8b5cc0);
     color: #f4f2f5;
@@ -113,6 +119,14 @@ export default {
   }
 }
 @media (min-width: 851px) and (max-width: 1280px) {
+   .div_style {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: 
+    flex-start; 
+    min-width: 100%;
+  },
   .main-card {
     min-width: 100%;
     min-height: 100%;
@@ -175,6 +189,14 @@ export default {
   }
 }
 @media (min-width: 375px) and (max-width: 850px) {
+  .div_style {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: 
+    flex-start; 
+    min-width: 100%;
+  },
   .main-card{
     min-width: 100%;
     min-height: 100%;
