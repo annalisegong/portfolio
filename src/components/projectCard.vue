@@ -65,13 +65,13 @@ export default {
     text-align: center;
     font-size: 22pt;
     font-weight: 600;
-    min-height: 80px;
+    min-height: 30px;
     white-space: break-spaces;
     word-break: break-word;
   }
   .p-card-img{
     margin: 10px;
-    max-height: 200px;
+    max-height: 210px;
   }
   .p-card-text-height{
     min-height: 130px;
